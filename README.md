@@ -15,6 +15,12 @@ cover.
 This is an independent technical audit. It is not peer review or a formal
 proof. The report states the assumptions and remaining assurance gap.
 
+## Original work
+
+- Announcement: [Bence Hervay on X](https://x.com/BenceHervay/status/2107533555199091089)
+- Proof repository: [bence-hervay/nopert-rid](https://github.com/bence-hervay/nopert-rid)
+- arXiv article: pending
+
 ## Contents
 
 - [`report/audit-report.pdf`](report/audit-report.pdf): the publication copy.
