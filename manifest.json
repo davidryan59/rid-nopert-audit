@@ -25,6 +25,12 @@
     "commit_date": "2026-09-28T16:43:16Z",
     "tag_at_commit": null
   },
+  "archive": {
+    "provider": "Zenodo",
+    "concept_doi": "10.5281/zenodo.23232398",
+    "version_doi": "10.5281/zenodo.23232399",
+    "version": "0.1.0"
+  },
   "sha256": {
     "paper/article.pdf": "e52022737fad1f5add102b8a8b357788a3c5086111f028255a6e7a26d6bd71ff",
     "proof/Cargo.lock": "2f40f55632dcbccd722fcd2681153f1f5472984680680d3346dbcee4dbb1bd24",
@@ -36,8 +42,8 @@
     "audit/controls-result.json": "6be8cefb1fa5a74654049861eaa65291a460252d9be02e6fb6d691b6e04ad789"
   },
   "publication_sha256": {
-    "report/audit-report.md": "1ba4792bca484ee67ce19e2befb8f83d2436a96dc7aa4e06d580fbe5a828175b",
-    "report/audit-report.pdf": "d3a4ad9b2ee84b46b4dfcf4e5647b37d0b1725034caee59fa99c35ba267fdc43",
+    "report/audit-report.md": "d5a4815fd6833fe9f58e23bc6f385615c7a98c9b787ca1857b1f5799b95f593d",
+    "report/audit-report.pdf": "7017642bd524b5cec872e3ca5078a9fbcc246d44ee6cace2cc551b2524cde0c7",
     "logs/audit-run.json": "c6c97a972a5e0029a89f5da6c2d71ba75472163228d9ae64c2e1911007637d74",
     "scripts/reproduce.sh": "7e58060616f95feb627fa3f479966eb0a26ec878b270cc176b3ecec321d49b78",
     "scripts/check-python-results.py": "3d2cc09421208d11bfddd899fc495bdf1a44d36e6b6a28ad990c7791d8598f5b",

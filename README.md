@@ -81,7 +81,10 @@ check, a recorded output, or a named mathematical argument.
 ## Citation
 
 Version `0.1.0` is the first-pass audit. Use [`CITATION.cff`](CITATION.cff) for
-repository metadata. A Zenodo DOI will be added after the first public release.
+repository metadata.
+
+- All versions: [10.5281/zenodo.23232398](https://doi.org/10.5281/zenodo.23232398)
+- Version `0.1.0`: [10.5281/zenodo.23232399](https://doi.org/10.5281/zenodo.23232399)
 
 Please cite Hervay's proof separately. This audit evaluates that work and does
 not claim its theorem or certificate as original work.

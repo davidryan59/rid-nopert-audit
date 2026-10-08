@@ -7,9 +7,14 @@ authors:
     given-names: David
 version: 0.1.0
 date-released: 2026-10-08
+doi: 10.5281/zenodo.23232399
 repository-code: "https://github.com/davidryan59/rid-nopert-audit"
 url: "https://github.com/davidryan59/rid-nopert-audit"
 license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23232398
+    description: Concept DOI for all versions
 abstract: >-
   An independent mathematical and computational audit of Bence Hervay's
   computer-assisted proof that the rhombicosidodecahedron is Nopert. The audit

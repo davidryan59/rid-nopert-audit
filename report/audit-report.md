@@ -2,7 +2,7 @@
 
 **David Ryan**  
 Version 0.1.0, 2026-10-08  
-DOI pending
+DOI: [10.5281/zenodo.23232399](https://doi.org/10.5281/zenodo.23232399)
 
 ## Abstract
 
