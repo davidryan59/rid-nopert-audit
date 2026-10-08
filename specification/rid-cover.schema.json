@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rid-cover:schema:1",
+  "title": "rid-cover/1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "name", "scope", "parameters", "witnesses", "zooms"],
+  "properties": {
+    "format": {"const": "rid-cover/1"},
+    "name": {"type": "string"},
+    "scope": {"enum": ["all", "domain"]},
+    "parameters": {"$ref": "#/$defs/parameters"},
+    "witnesses": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/witness"}
+    },
+    "zooms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/zoom"}
+    }
+  },
+  "$defs": {
+    "rational": {
+      "type": "string",
+      "pattern": "^(0|-?[1-9][0-9]*|-?[1-9][0-9]*/([2-9]|[1-9][0-9]+))$"
+    },
+    "number": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"$ref": "#/$defs/rational"},
+        {"$ref": "#/$defs/rational"}
+      ],
+      "items": false
+    },
+    "number5": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/number"}
+    },
+    "matrix5": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/number5"}
+    },
+    "unitInterval": {
+      "oneOf": [
+        {"const": [-1, 0]},
+        {"const": [-1, 1]},
+        {"const": [0, 1]}
+      ]
+    },
+    "unitBox": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {"$ref": "#/$defs/unitInterval"}
+    },
+    "rationalInterval": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"$ref": "#/$defs/rational"},
+        {"$ref": "#/$defs/rational"}
+      ],
+      "items": false
+    },
+    "face": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis", "side"],
+      "properties": {
+        "axis": {"type": "integer", "minimum": 0, "maximum": 3},
+        "side": {"enum": [-1, 1]}
+      }
+    },
+    "coordinates": {
+      "oneOf": [
+        {"const": "configuration"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["arc-plane"],
+          "properties": {
+            "arc-plane": {"enum": ["plus", "minus"]}
+          }
+        }
+      ]
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["faces", "shear", "radius"],
+      "properties": {
+        "faces": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/face"}
+        },
+        "shear": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {"$ref": "#/$defs/rational"}
+          }
+        },
+        "radius": {"$ref": "#/$defs/rational"}
+      }
+    },
+    "tubeShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tube"],
+      "properties": {
+        "tube": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["base", "offset", "radius"],
+          "properties": {
+            "base": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {"$ref": "#/$defs/rationalInterval"}
+            },
+            "offset": {"$ref": "#/$defs/unitBox"},
+            "radius": {"$ref": "#/$defs/rational"}
+          }
+        }
+      }
+    },
+    "pointShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["point"],
+      "properties": {
+        "point": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["base", "offset", "radii", "radius", "ratio", "window"],
+          "properties": {
+            "base": {"$ref": "#/$defs/unitBox"},
+            "offset": {"$ref": "#/$defs/unitBox"},
+            "radii": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {"$ref": "#/$defs/rational"}
+            },
+            "radius": {"$ref": "#/$defs/rational"},
+            "ratio": {"$ref": "#/$defs/rational"},
+            "window": {
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "#/$defs/window"}
+              ]
+            }
+          }
+        }
+      }
+    },
+    "beyond": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis", "inequality"],
+      "properties": {
+        "axis": {"type": "integer", "minimum": 0, "maximum": 4},
+        "inequality": {"type": "integer", "minimum": 0, "maximum": 72}
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coordinates", "centre", "map", "shape", "beyond"],
+      "properties": {
+        "coordinates": {"$ref": "#/$defs/coordinates"},
+        "centre": {"$ref": "#/$defs/number5"},
+        "map": {"$ref": "#/$defs/matrix5"},
+        "shape": {
+          "oneOf": [
+            {"$ref": "#/$defs/tubeShape"},
+            {"$ref": "#/$defs/pointShape"}
+          ]
+        },
+        "beyond": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/$defs/beyond"}
+          ]
+        }
+      }
+    },
+    "vertexIndex": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    "edgeWitness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge", "vertex"],
+      "properties": {
+        "edge": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/vertexIndex"}
+        },
+        "vertex": {"$ref": "#/$defs/vertexIndex"}
+      }
+    },
+    "directionWitness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["direction", "contact", "vertex"],
+      "properties": {
+        "direction": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/number"}
+        },
+        "contact": {"$ref": "#/$defs/vertexIndex"},
+        "vertex": {"$ref": "#/$defs/vertexIndex"}
+      }
+    },
+    "domainWitness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["inequality"],
+      "properties": {
+        "inequality": {"type": "integer", "minimum": 0, "maximum": 72}
+      }
+    },
+    "witness": {
+      "oneOf": [
+        {"$ref": "#/$defs/edgeWitness"},
+        {"$ref": "#/$defs/directionWitness"},
+        {"$ref": "#/$defs/domainWitness"}
+      ]
+    },
+    "factor": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"type": "integer", "minimum": 0, "maximum": 255}
+    },
+    "witnessLeaf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["witness"],
+      "properties": {
+        "witness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["index", "factor"],
+          "properties": {
+            "index": {"type": "integer", "minimum": 0},
+            "factor": {"$ref": "#/$defs/factor"}
+          }
+        }
+      }
+    },
+    "leaf": {
+      "oneOf": [
+        {"$ref": "#/$defs/witnessLeaf"},
+        {"const": "delegated"}
+      ]
+    },
+    "zoom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "tree", "leaves"],
+      "properties": {
+        "name": {"type": "string"},
+        "tree": {"type": "string", "pattern": "^[0-4.]+$"},
+        "leaves": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/leaf"}
+        }
+      }
+    }
+  }
+}

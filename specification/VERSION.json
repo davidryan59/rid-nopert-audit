@@ -1,0 +1,7 @@
+{
+  "format": "rid-cover-spec-version/1",
+  "version": "rid-cover/1-spec.1",
+  "hash_algorithm": "SHA-256",
+  "hashed_object": "SHA256SUMS",
+  "sha256": "5f0f6e67a0ba7cf121750aa1ef4f09b86896303adcda467e2216b7f918e5296f"
+}

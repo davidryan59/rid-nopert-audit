@@ -1,0 +1,68 @@
+command: /Users/davidryan/code/projects/rid-nopert-audit/clean-room/run.sh
+started_utc: 2026-10-08T12:23:18Z
+Python 3.8.13
+test_article_quadratic_and_subdivision (test_bernstein.BernsteinTests) ... ok
+test_constant (test_bernstein.BernsteinTests) ... ok
+test_deliberately_nonpositive_coefficient (test_bernstein.BernsteinTests) ... ok
+test_multivariate_tensor_product (test_bernstein.BernsteinTests) ... ok
+test_round_trip_at_rational_points (test_bernstein.BernsteinTests) ... ok
+test_univariate_linear_on_nonunit_box (test_bernstein.BernsteinTests) ... ok
+test_univariate_quadratic_on_nonunit_box (test_bernstein.BernsteinTests) ... ok
+test_zero_coefficient_fails_strict_sign (test_bernstein.BernsteinTests) ... ok
+test_corner_rule_rejects_non_multiaffine_polynomial (test_boxes_tree.BoxTests) ... ok
+test_exact_box_containment (test_boxes_tree.BoxTests) ... ok
+test_exact_interval_product_all_signs (test_boxes_tree.BoxTests) ... ok
+test_exact_map_containment (test_boxes_tree.BoxTests) ... ok
+test_multiaffine_corner_minimisation (test_boxes_tree.BoxTests) ... ok
+test_complete_tree (test_boxes_tree.TreeTests) ... ok
+test_duplicate_leaf_identifier (test_boxes_tree.TreeTests) ... ok
+test_enlarged_leaf (test_boxes_tree.TreeTests) ... ok
+test_invalid_axis (test_boxes_tree.TreeTests) ... ok
+test_missing_leaf (test_boxes_tree.TreeTests) ... ok
+test_overlapping_or_malformed_child_pair (test_boxes_tree.TreeTests) ... ok
+test_all_sign_shapes (test_exact.Q5Tests) ... ok
+test_comparison (test_exact.Q5Tests) ... ok
+test_field_operations (test_exact.Q5Tests) ... ok
+test_json_round_trip (test_exact.Q5Tests) ... ok
+test_near_cancellation_is_exact (test_exact.Q5Tests) ... ok
+test_rational_parser_rejects_noncanonical_grammar (test_exact.Q5Tests) ... ok
+test_arc_coordinate_round_trip (test_geometry.GeometryTests) ... ok
+test_arc_planes_have_exact_support_equality (test_geometry.GeometryTests) ... ok
+test_pentagon_coordinate_round_trip (test_geometry.GeometryTests) ... ok
+test_vertex_set_has_sixty_points_and_central_symmetry (test_geometry.GeometryTests) ... ok
+test_correct_distance_factor_positive_control (test_mutation_controls.MathematicalMutationControls) ... ok
+test_failed_exact_division_is_detected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_incorrect_exponent_is_rejected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_invalid_support_corner_is_detected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_negative_bernstein_coefficient_is_detected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_omitted_factor_fails_strict_positivity (test_mutation_controls.MathematicalMutationControls) ... ok
+test_perturbed_witness_coefficient_is_detected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_valid_support_corners_positive_control (test_mutation_controls.MathematicalMutationControls) ... ok
+test_wrong_distance_factor_is_rejected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_zero_bernstein_coefficient_is_detected (test_mutation_controls.MathematicalMutationControls) ... ok
+test_addition_and_multiplication (test_polynomial.PolynomialTests) ... ok
+test_affine_substitution (test_polynomial.PolynomialTests) ... ok
+test_cancellation_removes_zero_terms (test_polynomial.PolynomialTests) ... ok
+test_exact_monomial_division (test_polynomial.PolynomialTests) ... ok
+test_failed_monomial_division (test_polynomial.PolynomialTests) ... ok
+test_multiaffine_substitution (test_polynomial.PolynomialTests) ... ok
+test_all_copied_inputs_pass_syntactic_validation (test_schema.InputSchemaTests) ... ok
+test_broken_witness_reference_is_rejected (test_schema.InputSchemaTests) ... ok
+test_changed_pentagon_extension_descriptor_is_rejected (test_schema.InputSchemaTests) ... ok
+test_changed_root_bound_is_rejected (test_schema.InputSchemaTests) ... ok
+test_enlarged_handover_window_is_rejected (test_schema.InputSchemaTests) ... ok
+test_harmless_rational_rewrite_and_key_order_pass (test_schema.InputSchemaTests) ... ok
+test_malformed_rational_is_rejected (test_schema.InputSchemaTests) ... ok
+test_negative_factor_exponent_is_rejected (test_schema.InputSchemaTests) ... ok
+test_unknown_field_is_rejected (test_schema.InputSchemaTests) ... ok
+test_unknown_witness_field_is_rejected (test_schema.InputSchemaTests) ... ok
+
+----------------------------------------------------------------------
+Ran 55 tests in 0.313s
+
+OK
+clean-room result: inconclusive
+derived inventory: 38 covers, 11183 witness leaves, 48 delegated leaves
+blocking public-specification omissions: 11
+source_tree_sha256: f2843d2d93bd076a638775aabd6c00f5d675f668ed2a6ca65ffe4ac1796be6e5
+finished_utc: 2026-10-08T12:23:19Z

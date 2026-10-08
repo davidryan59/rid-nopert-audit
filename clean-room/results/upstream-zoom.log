@@ -1,0 +1,119 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded cfg-if v1.0.5
+  Downloaded autocfg v1.5.1
+  Downloaded cpufeatures v0.2.17
+  Downloaded block-buffer v0.10.4
+  Downloaded digest v0.10.7
+  Downloaded itoa v1.0.18
+  Downloaded crypto-common v0.1.7
+  Downloaded errno v0.3.14
+  Downloaded generic-array v0.14.7
+  Downloaded fs2 v0.4.3
+  Downloaded version_check v0.9.5
+  Downloaded num-integer v0.1.47
+  Downloaded signal-hook-registry v1.4.8
+  Downloaded zmij v1.0.23
+  Downloaded quote v1.0.47
+  Downloaded sha2 v0.10.9
+  Downloaded num-rational v0.4.2
+  Downloaded unicode-ident v1.0.26
+  Downloaded serde_core v1.0.229
+  Downloaded num-traits v0.2.19
+  Downloaded signal-hook v0.3.18
+  Downloaded proc-macro2 v1.0.107
+  Downloaded serde v1.0.229
+  Downloaded serde_derive v1.0.229
+  Downloaded memchr v2.8.3
+  Downloaded num-bigint v0.4.8
+  Downloaded typenum v1.20.1
+  Downloaded serde_json v1.0.151
+  Downloaded syn v3.0.6
+  Downloaded libc v0.2.189
+   Compiling version_check v0.9.5
+   Compiling libc v0.2.189
+   Compiling typenum v1.20.1
+   Compiling proc-macro2 v1.0.107
+   Compiling autocfg v1.5.1
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.26
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling generic-array v0.14.7
+   Compiling num-traits v0.2.19
+   Compiling cfg-if v1.0.5
+   Compiling serde v1.0.229
+   Compiling signal-hook v0.3.18
+   Compiling serde_json v1.0.151
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling digest v0.10.7
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling syn v3.0.6
+   Compiling num-integer v0.1.47
+   Compiling num-bigint v0.4.8
+   Compiling cpufeatures v0.2.17
+   Compiling serde_derive v1.0.229
+   Compiling sha2 v0.10.9
+   Compiling rid v0.1.0 (/private/tmp/rid-clean-comparison.Kwlu0M/upstream/proof)
+   Compiling num-rational v0.4.2
+   Compiling errno v0.3.14
+   Compiling signal-hook-registry v1.4.8
+   Compiling fs2 v0.4.3
+    Finished `release` profile [optimized] target(s) in 32.83s
+     Running unittests src/lib.rs (target/release/deps/rid-8c887cf20b807cee)
+
+running 4 tests
+arc-: 288 cells verified independently
+arc+: 343 cells verified independently
+test elimination::proof::tests::independent_verification_of_every_cell_part_0 has been running for over 60 seconds
+test elimination::proof::tests::independent_verification_of_every_cell_part_1 has been running for over 60 seconds
+test elimination::proof::tests::independent_verification_of_every_cell_part_2 has been running for over 60 seconds
+test elimination::proof::tests::independent_verification_of_every_cell_part_3 has been running for over 60 seconds
+endpoint-: 246 cells verified independently
+1: 45 cells verified independently
+5: 20 cells verified independently
+9: 34 cells verified independently
+13: 12 cells verified independently
+square: 877 cells verified independently
+17: 22 cells verified independently
+21: 25 cells verified independently
+crossing-: 687 cells verified independently
+25: 29 cells verified independently
+3: 27 cells verified independently
+29: 85 cells verified independently
+test elimination::proof::tests::independent_verification_of_every_cell_part_1 ... ok
+7: 27 cells verified independently
+11: 12 cells verified independently
+15: 15 cells verified independently
+crossing+: 1431 cells verified independently
+19: 67 cells verified independently
+2: 26 cells verified independently
+23: 35 cells verified independently
+6: 18 cells verified independently
+27: 17 cells verified independently
+10: 15 cells verified independently
+endpoint+: 305 cells verified independently
+0: 24 cells verified independently
+14: 45 cells verified independently
+4: 16 cells verified independently
+18: 19 cells verified independently
+8: 15 cells verified independently
+22: 31 cells verified independently
+12: 49 cells verified independently
+26: 19 cells verified independently
+test elimination::proof::tests::independent_verification_of_every_cell_part_2 ... ok
+16: 39 cells verified independently
+20: 17 cells verified independently
+24: 17 cells verified independently
+28: 11 cells verified independently
+test elimination::proof::tests::independent_verification_of_every_cell_part_0 ... ok
+pentagon: 6173 cells verified independently
+test elimination::proof::tests::independent_verification_of_every_cell_part_3 ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 397 filtered out; finished in 515.96s
+
+real 551.04
+user 1521.96
+sys 9.69

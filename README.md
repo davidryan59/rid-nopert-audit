@@ -27,6 +27,8 @@ proof. The report states the assumptions and remaining assurance gap.
 - [`report/audit-report.md`](report/audit-report.md): the report source.
 - [`manifest.json`](manifest.json): machine-readable inputs, hashes, commands,
   results, and environment details.
+- [`specification/RID-COVER-SPEC.md`](specification/RID-COVER-SPEC.md): neutral,
+  versioned `rid-cover/1` specification for a second clean-room checker.
 - [`logs/audit-run.json`](logs/audit-run.json): the recorded first audit run.
 - [`scripts/reproduce.sh`](scripts/reproduce.sh): a clean, full reproduction.
 - [`scripts/build-report.sh`](scripts/build-report.sh): the PDF build.

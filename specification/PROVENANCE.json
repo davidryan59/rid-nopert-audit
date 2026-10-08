@@ -1,0 +1,189 @@
+{
+  "format": "rid-cover-spec-provenance/1",
+  "specification_version": "rid-cover/1-spec.1",
+  "recorded_on": "2026-10-08",
+  "source_repository": "bence-hervay/nopert-rid",
+  "source_commit": "802a3ded09535c4a99cef1371ce0d0277c433fa8",
+  "source_checkout_state": "fresh detached checkout",
+  "article_sha256": "e52022737fad1f5add102b8a8b357788a3c5086111f028255a6e7a26d6bd71ff",
+  "method": {
+    "description": "A post-freeze specification session inspected the pinned implementation, extracted declarative definitions, and rewrote them as a neutral specification.",
+    "source_code_in_bundle": false,
+    "table_extraction": {
+      "vertices.json": "Exact values from the pinned implementation's fixed vertex-order definition.",
+      "domain-inequalities.json": "Exact terms from the pinned implementation's 73 indexed domain-polynomial definitions, with constraint metadata and homogeneous view degrees.",
+      "cover-inventory.json": "Pinned cover parameters expanded through the cover-family definitions into ordered names, roots, variable roles, and distance-variable positions."
+    },
+    "validated_counts": {
+      "vertices": 60,
+      "domain_inequalities": 73,
+      "covers": 38,
+      "zoom_roots": 334
+    },
+    "validation": [
+      "An independent exact-arithmetic script regenerated the documented vertex rule and all 73 polynomial formulas, then matched every extracted term.",
+      "An independent script regenerated all family orders, names, variable roles, distance positions, and root intervals, then matched all 334 inventory entries.",
+      "Every inventory parameter object and ordered zoom-name list matched its frozen JSON input."
+    ]
+  },
+  "definitions": [
+    {
+      "requirement": 1,
+      "name": "vertex numbering",
+      "sources": [
+        "proof/src/problem/geometry/mod.rs:21-90"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#3-vertex-numbering",
+        "vertices.json"
+      ]
+    },
+    {
+      "requirement": 2,
+      "name": "domain-inequality numbering",
+      "sources": [
+        "proof/src/problem/domain/mod.rs:11-199",
+        "proof/src/problem/geometry/mod.rs:93-137",
+        "proof/src/problem/configuration/mod.rs:11-91"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#4-domain-inequality-numbering",
+        "domain-inequalities.json"
+      ]
+    },
+    {
+      "requirement": 3,
+      "name": "affine-map and adapted-coordinate conventions",
+      "sources": [
+        "proof/src/elimination/zoom/mod.rs:88-194",
+        "proof/src/elimination/zoom/cover/parameters.rs:58-70",
+        "proof/src/elimination/zoom/cover/mod.rs:124-133,246-253,324-333",
+        "proof/src/elimination/proof/catalogue/mod.rs:151-259"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#5-coordinate-and-affine-map-conventions",
+        "cover-inventory.json"
+      ]
+    },
+    {
+      "requirement": 4,
+      "name": "zoom inventory and ordering",
+      "sources": [
+        "proof/src/elimination/zoom/cover/mod.rs:137-286",
+        "proof/src/elimination/proof/catalogue/mod.rs:12-317"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#7-zoom-inventory-names-and-order",
+        "cover-inventory.json"
+      ]
+    },
+    {
+      "requirement": 5,
+      "name": "zoom-variable ordering",
+      "sources": [
+        "proof/src/elimination/zoom/cover/mod.rs:226-286,350-380",
+        "proof/src/elimination/zoom/cover/coverage.rs:40-100",
+        "proof/src/elimination/zoom/mod.rs:57-85,385-452"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#8-zoom-variables-and-maps",
+        "cover-inventory.json"
+      ]
+    },
+    {
+      "requirement": 6,
+      "name": "face and radius ordering",
+      "sources": [
+        "proof/src/elimination/zoom/cover/parameters.rs:41-55,73-125,140-154",
+        "proof/src/elimination/zoom/cover/mod.rs:137-214"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#6-signed-faces-and-radii"
+      ]
+    },
+    {
+      "requirement": 7,
+      "name": "tree grammar",
+      "sources": [
+        "proof/src/elimination/zoom/tree/mod.rs:1-57",
+        "proof/src/elimination/proof/mod.rs:145-206"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#9-cell-tree-grammar"
+      ]
+    },
+    {
+      "requirement": 8,
+      "name": "witness semantics",
+      "sources": [
+        "proof/src/elimination/witness/mod.rs:85-263,342-515",
+        "proof/src/problem/geometry/mod.rs:208-260",
+        "proof/src/elimination/lemma/mod.rs:63-168",
+        "proof/src/arithmetic/polynomial/bernstein.rs:1-190"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#10-witness-semantics"
+      ]
+    },
+    {
+      "requirement": 9,
+      "name": "delegated hand-over",
+      "sources": [
+        "proof/src/elimination/zoom/cover/parameters.rs:116-126",
+        "proof/src/elimination/zoom/cover/mod.rs:190-220,240-268",
+        "proof/src/elimination/zoom/cover/coverage.rs:21-50,103-170",
+        "proof/src/elimination/proof/mod.rs:175-204"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#11-delegated-hand-over"
+      ]
+    },
+    {
+      "requirement": 10,
+      "name": "pentagon extension",
+      "sources": [
+        "proof/src/elimination/zoom/cover/parameters.rs:128-133",
+        "proof/src/elimination/zoom/cover/mod.rs:288-314,336-348",
+        "proof/src/elimination/zoom/cover/coverage.rs:53-65",
+        "proof/src/elimination/proof/catalogue/mod.rs:170-197"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#12-pentagon-extension"
+      ]
+    },
+    {
+      "requirement": 11,
+      "name": "complete JSON schema",
+      "sources": [
+        "proof/src/arithmetic/exact/mod.rs:14-75,156-205",
+        "proof/src/arithmetic/polynomial/mod.rs:11-33",
+        "proof/src/elimination/zoom/cover/parameters.rs:1-160",
+        "proof/src/elimination/witness/mod.rs:402-515",
+        "proof/src/elimination/proof/format/mod.rs:1-94",
+        "proof/src/elimination/proof/mod.rs:124-224"
+      ],
+      "outputs": [
+        "RID-COVER-SPEC.md#13-json-structure",
+        "rid-cover.schema.json"
+      ]
+    }
+  ],
+  "source_file_sha256": {
+    "proof/src/arithmetic/exact/mod.rs": "63ab26e3fb62bc4117d4a0048065b65d396aca8f158a2249c417fc3a53dc802d",
+    "proof/src/arithmetic/polynomial/mod.rs": "e22c318c70d3479096b0eb25acefa5f961c7928b21cb64801413a2b7074b2e32",
+    "proof/src/arithmetic/polynomial/bernstein.rs": "3cfed598ce29bb163d540b21b6402b203ff82c0cc949d8eea351478014ed7afe",
+    "proof/src/problem/configuration/mod.rs": "bcd2bf457f4a7c10075a9bb8b62f448ac1b379bf2d1f42237ff7e42443945fdb",
+    "proof/src/problem/geometry/mod.rs": "12d35ff06c9ccbdf5f489cd373e0d552ffaafb24fee3b0c0a116cb8f622a16de",
+    "proof/src/problem/domain/mod.rs": "291aee296f7b34f337c90060b7bcbd60f1228c213de625f3518c5e0dc38f011e",
+    "proof/src/elimination/zoom/mod.rs": "06d6bf747c96448c6d21f4c4d002983a6e05f2aada4fab571090341db04583c1",
+    "proof/src/elimination/zoom/cover/mod.rs": "7beea498d6a0488aaf8cafa0880a54e89819c59e2d31ee6c4be07a9d16cfec28",
+    "proof/src/elimination/zoom/cover/parameters.rs": "fda7da4946750b182b953e9f73bb3717bd4903c3f6f5cbec29612560284150a7",
+    "proof/src/elimination/zoom/cover/coverage.rs": "f57a030c2cd80876643f2c058ae11c6dd83c7d7adec4da4c54d62c86cc58a0b9",
+    "proof/src/elimination/zoom/tree/mod.rs": "151cc872cc9d3a3ea96ac79f6fedd7db242433bdbd62533954c322447dbe241c",
+    "proof/src/elimination/witness/mod.rs": "ae8c6f60a698dfeda11913ea1ef94f177aa696a353a69ef5ec1b28689f9fa067",
+    "proof/src/elimination/lemma/mod.rs": "b4cb788dca4bed70fc5555049e0ffda1a8745e9b7c4321fab3125b9dda8e0ddf",
+    "proof/src/elimination/proof/format/mod.rs": "662ceda6d527f83a91aff7e7fea827e675ca0ad37da17b11b5fe0b501be436ce",
+    "proof/src/elimination/proof/mod.rs": "060bd30d9a512e3a81c8f91d5e829591387746bb7c19ad36eb5b4ad71b82bb3f",
+    "proof/src/elimination/proof/catalogue/mod.rs": "d52bc486b03bbd90012e765d8438ec585f943c985f238f6acc10c95f3c6f34e3"
+  }
+}

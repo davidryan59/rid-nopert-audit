@@ -1,0 +1,167 @@
+{
+  "format": "rid-clean-room-comparison/1",
+  "generated_at": "2026-10-08T12:36:26Z",
+  "audited_upstream_commit": "802a3ded09535c4a99cef1371ce0d0277c433fa8",
+  "freeze": {
+    "completed_before_source_comparison": true,
+    "source_tree_sha256": "f2843d2d93bd076a638775aabd6c00f5d675f668ed2a6ca65ffe4ac1796be6e5",
+    "result": "inconclusive",
+    "mathematically_checked_cells": 0
+  },
+  "upstream_run": {
+    "checkout": "fresh detached checkout",
+    "commit_verified": true,
+    "command": "cargo test --release --lib proof::tests::independent_verification_of_every_cell -- --ignored --test-threads=4 --nocapture",
+    "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+    "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)",
+    "tests_passed": 4,
+    "tests_failed": 0,
+    "verified_witness_cells": 11183,
+    "test_seconds": 515.96,
+    "wall_seconds_including_compilation": 551.04,
+    "log": "results/upstream-zoom.log",
+    "log_sha256": "5f295b50bca6d5d9ec84a87029caf8cf6198b1a712e2c59ed1391695c2c985c6"
+  },
+  "inventory_comparison": {
+    "cover_names_match": true,
+    "cover_count": 38,
+    "per_cover_witness_counts_match": true,
+    "clean_room_stored_witness_leaves": 11183,
+    "upstream_verified_witness_cells": 11183,
+    "stored_delegated_leaves": 48,
+    "stored_total_leaf_records": 11231,
+    "numeric_disagreements": []
+  },
+  "per_cover": {
+    "0": {"stored_witness_leaves": 24, "stored_delegated_leaves": 0, "upstream_verified_cells": 24, "count_matches": true},
+    "1": {"stored_witness_leaves": 45, "stored_delegated_leaves": 0, "upstream_verified_cells": 45, "count_matches": true},
+    "2": {"stored_witness_leaves": 26, "stored_delegated_leaves": 0, "upstream_verified_cells": 26, "count_matches": true},
+    "3": {"stored_witness_leaves": 27, "stored_delegated_leaves": 0, "upstream_verified_cells": 27, "count_matches": true},
+    "4": {"stored_witness_leaves": 16, "stored_delegated_leaves": 0, "upstream_verified_cells": 16, "count_matches": true},
+    "5": {"stored_witness_leaves": 20, "stored_delegated_leaves": 0, "upstream_verified_cells": 20, "count_matches": true},
+    "6": {"stored_witness_leaves": 18, "stored_delegated_leaves": 0, "upstream_verified_cells": 18, "count_matches": true},
+    "7": {"stored_witness_leaves": 27, "stored_delegated_leaves": 0, "upstream_verified_cells": 27, "count_matches": true},
+    "8": {"stored_witness_leaves": 15, "stored_delegated_leaves": 0, "upstream_verified_cells": 15, "count_matches": true},
+    "9": {"stored_witness_leaves": 34, "stored_delegated_leaves": 0, "upstream_verified_cells": 34, "count_matches": true},
+    "10": {"stored_witness_leaves": 15, "stored_delegated_leaves": 0, "upstream_verified_cells": 15, "count_matches": true},
+    "11": {"stored_witness_leaves": 12, "stored_delegated_leaves": 0, "upstream_verified_cells": 12, "count_matches": true},
+    "12": {"stored_witness_leaves": 49, "stored_delegated_leaves": 0, "upstream_verified_cells": 49, "count_matches": true},
+    "13": {"stored_witness_leaves": 12, "stored_delegated_leaves": 0, "upstream_verified_cells": 12, "count_matches": true},
+    "14": {"stored_witness_leaves": 45, "stored_delegated_leaves": 0, "upstream_verified_cells": 45, "count_matches": true},
+    "15": {"stored_witness_leaves": 15, "stored_delegated_leaves": 0, "upstream_verified_cells": 15, "count_matches": true},
+    "16": {"stored_witness_leaves": 39, "stored_delegated_leaves": 0, "upstream_verified_cells": 39, "count_matches": true},
+    "17": {"stored_witness_leaves": 22, "stored_delegated_leaves": 0, "upstream_verified_cells": 22, "count_matches": true},
+    "18": {"stored_witness_leaves": 19, "stored_delegated_leaves": 0, "upstream_verified_cells": 19, "count_matches": true},
+    "19": {"stored_witness_leaves": 67, "stored_delegated_leaves": 0, "upstream_verified_cells": 67, "count_matches": true},
+    "20": {"stored_witness_leaves": 17, "stored_delegated_leaves": 0, "upstream_verified_cells": 17, "count_matches": true},
+    "21": {"stored_witness_leaves": 25, "stored_delegated_leaves": 0, "upstream_verified_cells": 25, "count_matches": true},
+    "22": {"stored_witness_leaves": 31, "stored_delegated_leaves": 0, "upstream_verified_cells": 31, "count_matches": true},
+    "23": {"stored_witness_leaves": 35, "stored_delegated_leaves": 0, "upstream_verified_cells": 35, "count_matches": true},
+    "24": {"stored_witness_leaves": 17, "stored_delegated_leaves": 0, "upstream_verified_cells": 17, "count_matches": true},
+    "25": {"stored_witness_leaves": 29, "stored_delegated_leaves": 0, "upstream_verified_cells": 29, "count_matches": true},
+    "26": {"stored_witness_leaves": 19, "stored_delegated_leaves": 0, "upstream_verified_cells": 19, "count_matches": true},
+    "27": {"stored_witness_leaves": 17, "stored_delegated_leaves": 0, "upstream_verified_cells": 17, "count_matches": true},
+    "28": {"stored_witness_leaves": 11, "stored_delegated_leaves": 0, "upstream_verified_cells": 11, "count_matches": true},
+    "29": {"stored_witness_leaves": 85, "stored_delegated_leaves": 0, "upstream_verified_cells": 85, "count_matches": true},
+    "arc+": {"stored_witness_leaves": 343, "stored_delegated_leaves": 0, "upstream_verified_cells": 343, "count_matches": true},
+    "arc-": {"stored_witness_leaves": 288, "stored_delegated_leaves": 0, "upstream_verified_cells": 288, "count_matches": true},
+    "endpoint+": {"stored_witness_leaves": 305, "stored_delegated_leaves": 0, "upstream_verified_cells": 305, "count_matches": true},
+    "endpoint-": {"stored_witness_leaves": 246, "stored_delegated_leaves": 0, "upstream_verified_cells": 246, "count_matches": true},
+    "crossing+": {"stored_witness_leaves": 1431, "stored_delegated_leaves": 34, "upstream_verified_cells": 1431, "count_matches": true},
+    "crossing-": {"stored_witness_leaves": 687, "stored_delegated_leaves": 14, "upstream_verified_cells": 687, "count_matches": true},
+    "pentagon": {"stored_witness_leaves": 6173, "stored_delegated_leaves": 0, "upstream_verified_cells": 6173, "count_matches": true},
+    "square": {"stored_witness_leaves": 877, "stored_delegated_leaves": 0, "upstream_verified_cells": 877, "count_matches": true}
+  },
+  "special_treatment": {
+    "delegated_handovers": {
+      "unique_records": 48,
+      "by_cover": {"crossing+": 34, "crossing-": 14},
+      "upstream_result": "passed exact window containment, configuration equality, target-root containment, and recursive target coverage",
+      "clean_room_result": "blocked because the public data marker names no target and the target-selection rule is unpublished"
+    },
+    "pentagon_extension": {
+      "cover": "pentagon",
+      "descriptor": {"axis": 1, "inequality": 0},
+      "upstream_result": "passed the exact positive-multiple check beyond the upper face",
+      "clean_room_result": "the article-level identity passed, but binding the two indices remained blocked"
+    },
+    "domain_witness_cells": {
+      "syntactic_reference_count": 450,
+      "by_cover": {"arc+": 32, "arc-": 72, "crossing+": 31, "crossing-": 160, "endpoint+": 10, "endpoint-": 50, "square": 95},
+      "upstream_result": "checked with the indexed domain-polynomial table",
+      "clean_room_result": "blocked because the public material does not publish that table"
+    }
+  },
+  "learned_only_after_freeze": [
+    {
+      "blocker": "vertex-numbering",
+      "source": "proof/src/problem/geometry/mod.rs",
+      "definition": "Generate literal vertex codes, sort them lexicographically in a BTreeSet, and use that order."
+    },
+    {
+      "blocker": "domain-inequality-numbering",
+      "source": "proof/src/problem/domain/mod.rs",
+      "definition": "Index 0 is the viewing triangle; 1 to 12 are ordered rotation inequalities; 13 to 72 are folds in symmetry order."
+    },
+    {
+      "blocker": "tree-grammar",
+      "source": "proof/src/elimination/zoom/tree/mod.rs",
+      "definition": "A preorder digit 0 to 4 splits that variable at its exact midpoint; lower subtree precedes upper; a dot is a leaf; the leaf array is preorder."
+    },
+    {
+      "blocker": "zoom-name-grammar",
+      "source": "proof/src/elimination/zoom/cover/mod.rs and proof/src/elimination/zoom/tests/independent.rs",
+      "definition": "The implementation constructs Tube, A, B, then sheared A-prime families in deterministic face order and compares the complete generated name list with the JSON list."
+    },
+    {
+      "blocker": "zoom-coordinate-order",
+      "source": "proof/src/elimination/zoom/tests/independent.rs",
+      "definition": "Factors index five zoom variables. Tube divides the delta variable at base dimension k; A and A-prime divide variables 0 and 1; B divides variable 0."
+    },
+    {
+      "blocker": "affine-map-semantics",
+      "source": "proof/src/elimination/zoom/cover/parameters.rs and proof/src/elimination/zoom/tests/independent.rs",
+      "definition": "Rows are output coordinates and columns are cover coordinates: x_i = centre_i + sum_j map[i][j] z_j."
+    },
+    {
+      "blocker": "witness-object-semantics",
+      "source": "proof/src/elimination/witness/mod.rs and proof/src/elimination/zoom/tests/independent.rs",
+      "definition": "Edge fields give an ordered support edge, direction gives a screen normal with a contact vertex, vertex gives the plug vertex, and inequality gives a domain index."
+    },
+    {
+      "blocker": "face-radius-order",
+      "source": "proof/src/elimination/zoom/cover/parameters.rs",
+      "definition": "Faces are ordered per axis, lower face before upper face when present; radii follow that order."
+    },
+    {
+      "blocker": "delegation-binding",
+      "source": "proof/src/elimination/proof/tests/adversarial.rs",
+      "definition": "A delegated unsheared A cell uses its window vector; the largest signed offset selects the A-prime offset face, while the base face is retained."
+    },
+    {
+      "blocker": "pentagon-extension-encoding",
+      "source": "proof/src/elimination/zoom/cover/mod.rs",
+      "definition": "Beyond names a cover-coordinate axis and a domain-inequality index; the code proves that inequality is a positive multiple of displacement beyond the upper endpoint."
+    },
+    {
+      "blocker": "rid-cover-schema",
+      "source": "proof/src/elimination/proof/format/mod.rs",
+      "definition": "Serde types require every field, deny unknown fields, require canonical compact JSON, and require one final newline."
+    }
+  ],
+  "disagreements": [
+    {
+      "subject": "mathematical verdict",
+      "clean_room": "inconclusive",
+      "upstream": "passed",
+      "classification": "ambiguous_or_incomplete_public_specification",
+      "analysis": "The results do not contradict each other. The upstream source supplies eleven conventions absent from the article and declarative inputs. The frozen checker could not reconstruct the mathematical cells without those conventions."
+    }
+  ],
+  "overall_classification": "inconclusive_strict_clean_room_due_to_incomplete_public_specification",
+  "public_audit_verdict_change": "none",
+  "recommended_next_process": [
+    "A specification session may extract a neutral declarative rid-cover/1 specification from the pinned source, with provenance for every definition.",
+    "A new implementation session should receive only that specification, the article, and the 38 JSON files."
+  ]
+}
