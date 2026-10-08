@@ -1,4 +1,63 @@
+# Reproduction working directories. scripts/reproduce.sh checks the upstream
+# proof out into work/ (or the name passed to it) and writes full logs there.
 /work/
 /work-*/
-/.DS_Store
+
+# Rendered report. scripts/build-report.sh prints the PDF from this HTML; the
+# PDF is the publication copy and stays tracked, the HTML does not.
 /report/audit-report.html
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Rust, if a checker is built inside this repo
+target/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets and local config (keep examples tracked)
+.env
+.env.*
+!.env.example
+
+# Claude Code runtime state
+.claude/
+
+# Data files from checkers and solvers. A tracked script regenerates each one.
+# Keep results as JSON beside the script that wrote them.
+*.sqlite
+*.sqlite3
+*.db
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Scratch
+temp_*
+temp-*
+temp-*/
+
+# Clean Room
+/clean-room/inputs/
+/clean-room/research/
