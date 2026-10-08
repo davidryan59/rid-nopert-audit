@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "audit": {
+    "title": "Independent Audit of the Nopert Certificate for the Rhombicosidodecahedron",
+    "version": "0.1.0",
+    "date": "2026-10-08",
+    "outcome": "confirmed subject to stated assumptions",
+    "operator": "David Ryan",
+    "assistance": {
+      "system": "OpenAI Codex",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "Extra High",
+      "roles": [
+        "mathematical review",
+        "source inspection",
+        "computational reproduction",
+        "adversarial analysis",
+        "report drafting"
+      ]
+    }
+  },
+  "upstream": {
+    "repository": "https://github.com/bence-hervay/nopert-rid",
+    "commit": "802a3ded09535c4a99cef1371ce0d0277c433fa8",
+    "commit_date": "2026-09-28T16:43:16Z",
+    "tag_at_commit": null
+  },
+  "sha256": {
+    "paper/article.pdf": "e52022737fad1f5add102b8a8b357788a3c5086111f028255a6e7a26d6bd71ff",
+    "proof/Cargo.lock": "2f40f55632dcbccd722fcd2681153f1f5472984680680d3346dbcee4dbb1bd24",
+    "proof/results/full/check.json": "bc3024472c4f15317c4af96a26d299453b9d58c2d8875ad53b0dcece5de467af",
+    "proof/results/full/search.json": "fe27092d65b3dd0907357318a5d42f1a5cfb11bdc89cff00ab153202df335f6f",
+    "proof/results/full/search.cert": "df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f",
+    "audit/uv.lock": "2ea8eda0baf9f33ef03a0a8c946860b2f3def1eaffe154ba27d22f9b4f4bc44b",
+    "audit/results.jsonl": "bf46d5c27f030c893c67bf9b467e00fd700acc5fe684478da22db3e038790a07",
+    "audit/controls-result.json": "6be8cefb1fa5a74654049861eaa65291a460252d9be02e6fb6d691b6e04ad789"
+  },
+  "publication_sha256": {
+    "report/audit-report.md": "1ba4792bca484ee67ce19e2befb8f83d2436a96dc7aa4e06d580fbe5a828175b",
+    "report/audit-report.pdf": "d3a4ad9b2ee84b46b4dfcf4e5647b37d0b1725034caee59fa99c35ba267fdc43",
+    "logs/audit-run.json": "c6c97a972a5e0029a89f5da6c2d71ba75472163228d9ae64c2e1911007637d74",
+    "scripts/reproduce.sh": "7e58060616f95feb627fa3f479966eb0a26ec878b270cc176b3ecec321d49b78",
+    "scripts/check-python-results.py": "3d2cc09421208d11bfddd899fc495bdf1a44d36e6b6a28ad990c7791d8598f5b",
+    "scripts/build-report.sh": "2e2ea27c7d72653f404c7c523fd15907ed47e2ea0d7aa6faa2b54b9fed8b0218"
+  },
+  "hash_notes": {
+    "audit/results.jsonl": "This records the Python 3.14.6 first run. JSON bytes vary across supported Python versions. Reproduction uses exact semantic validation."
+  },
+  "certificate": {
+    "bytes": 18195036,
+    "records": 192696,
+    "components": {
+      "Domain": 12650,
+      "Global": 157458,
+      "Local": 21792,
+      "Exotic": 796
+    },
+    "max_depth": 49
+  },
+  "first_run_environment": {
+    "operating_system": "Darwin 25.6.0 arm64",
+    "rustc": "1.99.0 (b940084d7 2026-09-28)",
+    "cargo": "1.99.0 (5f94df478 2026-08-27)",
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "python_flint": "0.9.0"
+  },
+  "results": {
+    "rust_checker": {
+      "complete": true,
+      "frontier": 0,
+      "records": 192696,
+      "seconds": 49.26
+    },
+    "python_replay": {
+      "accepted": 192696,
+      "refused": 0,
+      "seconds": 116
+    },
+    "clean_search": {
+      "evaluated": 385391,
+      "records": 192696,
+      "splits": 192695,
+      "seconds": 89.764,
+      "byte_identical": true
+    },
+    "ordinary_tests": {
+      "passed": 393,
+      "platform_exclusions": 2
+    },
+    "exhaustive_zoom_model": {
+      "cells": 11183,
+      "partitions": 4,
+      "passed": true,
+      "seconds": 515.21
+    }
+  },
+  "publication_validation": {
+    "date": "2026-10-08",
+    "script": "scripts/reproduce.sh",
+    "fresh_checkout": true,
+    "python": "3.13.2",
+    "exit_code": 0,
+    "python_records_accepted": 192696,
+    "python_records_refused": 0,
+    "ordinary_rust_tests_passed": 393,
+    "zoom_cells_accepted": 11183,
+    "regenerated_certificate_byte_identical": true
+  },
+  "remaining_check": "An externally authored clean-room checker for the 38 zoom covers would provide the strongest further assurance."
+}

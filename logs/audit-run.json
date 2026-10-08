@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-08",
+  "upstream_commit": "802a3ded09535c4a99cef1371ce0d0277c433fa8",
+  "rust_checker_stdout": {
+    "command": "check",
+    "complete": true,
+    "frontier": 0,
+    "header_complete": true,
+    "max_depth": 4096,
+    "policy": "65c13764df7a6acf6563e4026025a7305d157d70cb9f3bb40803aeeca64418a5",
+    "records": 192696,
+    "root": "",
+    "unterminated_bytes": 0
+  },
+  "python_structure_stdout": {
+    "records": 192696,
+    "components": {
+      "Domain": 12650,
+      "Global": 157458,
+      "Exotic": 796,
+      "Local": 21792
+    },
+    "problems": [],
+    "max_depth": 49
+  },
+  "python_controls_stdout": {
+    "global_r0": [4800, 0],
+    "global_sym": [400, 0],
+    "global_mutations": [38, 0, 0],
+    "domain_inD": [10950, 0],
+    "cover_float": [316, 11084, 0],
+    "cover_relabel": [7235, 3],
+    "pentagon_beyond": true
+  },
+  "observations": {
+    "certificate_lines_including_header": 192697,
+    "certificate_bytes": 18195036,
+    "certificate_sha256": "df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f",
+    "python_records_accepted": 192696,
+    "python_records_refused": 0,
+    "clean_search_byte_identical": true,
+    "ordinary_tests_passed": 393,
+    "zoom_cells_accepted": 11183
+  },
+  "timings_seconds": {
+    "rust_checker": 49.26,
+    "python_record_replay": 116,
+    "clean_rust_search": 89.764,
+    "exhaustive_zoom_model": 515.21
+  },
+  "notes": [
+    "The full Python self-test printed PASS for every check.",
+    "Two default Rust tests were excluded after diagnosis on macOS.",
+    "One excluded test requires Linux prlimit.",
+    "One excluded scheduler test uses a sandbox-sensitive timing threshold.",
+    "Neither excluded test enters the mathematical proof checker."
+  ]
+}
