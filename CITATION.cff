@@ -5,9 +5,9 @@ type: report
 authors:
   - family-names: Ryan
     given-names: David
-version: 0.1.0
-date-released: 2026-10-08
-doi: 10.5281/zenodo.23232399
+version: 0.2.0
+date-released: 2026-10-09
+doi: 10.5281/zenodo.23258532
 repository-code: "https://github.com/davidryan59/rid-nopert-audit"
 url: "https://github.com/davidryan59/rid-nopert-audit"
 license: CC-BY-4.0
@@ -19,7 +19,8 @@ abstract: >-
   An independent mathematical and computational audit of Bence Hervay's
   computer-assisted proof that the rhombicosidodecahedron is Nopert. The audit
   confirms the proof subject to stated assumptions at repository commit
-  802a3ded09535c4a99cef1371ce0d0277c433fa8.
+  802a3ded09535c4a99cef1371ce0d0277c433fa8. Version 0.2.0 adds a
+  specification-mediated clean-room verification of all 38 zoom covers.
 keywords:
   - Rupert's property
   - Nopert

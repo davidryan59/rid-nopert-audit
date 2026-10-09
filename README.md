@@ -99,10 +99,11 @@ verdicts, or comparison material. Post-freeze comparison found full agreement.
 
 ## Citation
 
-Version `0.1.0` is the first-pass audit. Use [`CITATION.cff`](CITATION.cff) for
-repository metadata.
+Version `0.2.0` adds the specification-mediated clean-room verification. Use
+[`CITATION.cff`](CITATION.cff) for repository metadata.
 
 - All versions: [10.5281/zenodo.23232398](https://doi.org/10.5281/zenodo.23232398)
+- Version `0.2.0`: [10.5281/zenodo.23258532](https://doi.org/10.5281/zenodo.23258532)
 - Version `0.1.0`: [10.5281/zenodo.23232399](https://doi.org/10.5281/zenodo.23232399)
 
 Please cite Hervay's proof separately. This audit evaluates that work and does

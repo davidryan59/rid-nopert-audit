@@ -1,8 +1,8 @@
 # Independent Audit of the Nopert Certificate for the Rhombicosidodecahedron
 
 **David Ryan**  
-Version 0.1.0, 2026-10-09<br>
-DOI: [10.5281/zenodo.23232399](https://doi.org/10.5281/zenodo.23232399)
+Version 0.2.0, 2026-10-09<br>
+DOI: [10.5281/zenodo.23258532](https://doi.org/10.5281/zenodo.23258532)
 
 ## Abstract
 
