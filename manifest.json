@@ -3,7 +3,7 @@
   "audit": {
     "title": "Independent Audit of the Nopert Certificate for the Rhombicosidodecahedron",
     "version": "0.1.0",
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "outcome": "confirmed subject to stated assumptions",
     "operator": "David Ryan",
     "assistance": {
@@ -15,7 +15,8 @@
         "source inspection",
         "computational reproduction",
         "adversarial analysis",
-        "report drafting"
+        "report drafting",
+        "specification-mediated clean-room comparison"
       ]
     }
   },
@@ -39,11 +40,24 @@
     "proof/results/full/search.cert": "df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f",
     "audit/uv.lock": "2ea8eda0baf9f33ef03a0a8c946860b2f3def1eaffe154ba27d22f9b4f4bc44b",
     "audit/results.jsonl": "bf46d5c27f030c893c67bf9b467e00fd700acc5fe684478da22db3e038790a07",
-    "audit/controls-result.json": "6be8cefb1fa5a74654049861eaa65291a460252d9be02e6fb6d691b6e04ad789"
+    "audit/controls-result.json": "6be8cefb1fa5a74654049861eaa65291a460252d9be02e6fb6d691b6e04ad789",
+    "specification/SHA256SUMS": "5f0f6e67a0ba7cf121750aa1ef4f09b86896303adcda467e2216b7f918e5296f",
+    "clean-room-v2/BOUNDARY.md": "223c62bbc588b6523e6d879ac6ef73c947fbe0e9f27bf8447888cf769da26438",
+    "clean-room-v2/FREEZE.md": "9b80b198e637847322a9a0cb811b9742e3659ccbed321005e9123b282c5c2ad9",
+    "clean-room-v2/RUN-RECORD.md": "6112c0df8713123c6760244f7d5c77bbf99e7d452524145dfce6a9d5acc99e0f",
+    "clean-room-v2/checker.py": "7d71c6c588c703515134816a67275c601982345ed6aa49945400d725e8e74988",
+    "clean-room-v2/test_checker.py": "d4457fe1af28d8a8b73665b66206126107c15f3524f3add734cc6bda055909f2",
+    "clean-room-v2/SOURCE-MANIFEST.sha256": "3d8cca95ce326b8835104171fe0ed16d67d5b5895767b5ddd424546ba085abc7",
+    "clean-room-v2/RESULT-MANIFEST.json": "f9791caaf628ff79d6c9b6a680cca1aefeec748d6d7c154a51322ed65371c8b4",
+    "clean-room-v2/INPUT-MANIFEST.sha256": "3e7361ad7567d40cc2eb561b5e7a28014acbb65e68b284a246b65d85090bf8c3",
+    "clean-room-v2/FROZEN-SHA256SUMS": "7e9d36d44d00f33c8f2847711aa3d349ecfcf47dfd6584b5d8386e5b61af085c"
   },
   "publication_sha256": {
-    "report/audit-report.md": "d5a4815fd6833fe9f58e23bc6f385615c7a98c9b787ca1857b1f5799b95f593d",
-    "report/audit-report.pdf": "7017642bd524b5cec872e3ca5078a9fbcc246d44ee6cace2cc551b2524cde0c7",
+    "README.md": "cb347662b7bda3690340e3654ddda92920774fad7194e849fb2988b640f010ba",
+    "report/audit-report.md": "b23ba9780a343df66e1f91e48d68e0c61f9dbfc1bc69f7932db885569cc2692c",
+    "report/audit-report.pdf": "7f55999c6960d6ff06a4b1daf3f10d27cd65865de6fcd0228a529b816f1e9cbd",
+    "comparison-v2/README.md": "9e272c2adc7dff4070bfbabd8903366a4103024717e03afd61d036e198a720e0",
+    "comparison-v2/comparison.json": "3bae33a2e790eb9ad08ed30da7de1bb132951489372d00cfbe72cbf04d90abf4",
     "logs/audit-run.json": "c6c97a972a5e0029a89f5da6c2d71ba75472163228d9ae64c2e1911007637d74",
     "scripts/reproduce.sh": "7e58060616f95feb627fa3f479966eb0a26ec878b270cc176b3ecec321d49b78",
     "scripts/check-python-results.py": "3d2cc09421208d11bfddd899fc495bdf1a44d36e6b6a28ad990c7791d8598f5b",
@@ -95,10 +109,26 @@
       "platform_exclusions": 2
     },
     "exhaustive_zoom_model": {
-      "cells": 11183,
+      "witness_leaves": 11183,
+      "delegated_leaves_validated_by_other_upstream_tests": 48,
+      "terminal_leaves": 11231,
       "partitions": 4,
       "passed": true,
       "seconds": 515.21
+    },
+    "specification_mediated_clean_room": {
+      "specification_version": "rid-cover/1-spec.1",
+      "source_isolated": true,
+      "verdict": "pass",
+      "tests_passed": 13,
+      "cover_files_passed": 38,
+      "terminal_leaves": 11231,
+      "witness_leaves": 11183,
+      "delegated_leaves": 48,
+      "corner_evaluations": 357856,
+      "bernstein_coefficients": 1260757,
+      "non_runtime_reproduction_match": true,
+      "comparison_status": "confirmed"
     }
   },
   "publication_validation": {
@@ -110,8 +140,10 @@
     "python_records_accepted": 192696,
     "python_records_refused": 0,
     "ordinary_rust_tests_passed": 393,
-    "zoom_cells_accepted": 11183,
+    "witness_leaves_accepted": 11183,
+    "delegated_leaves_validated": 48,
+    "terminal_leaves": 11231,
     "regenerated_certificate_byte_identical": true
   },
-  "remaining_check": "An externally authored clean-room checker for the 38 zoom covers would provide the strongest further assurance."
+  "remaining_check": "A formal kernel would provide stronger assurance beyond the independent exact checkers and stated execution assumptions."
 }

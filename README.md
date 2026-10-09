@@ -10,7 +10,8 @@ regenerated the complete certificate.
 The result applies to Hervay's repository commit
 `802a3ded09535c4a99cef1371ce0d0277c433fa8`. The audit found no mathematical
 gap in the projection reduction, symmetry reduction, zoom lemma, or finite
-cover.
+cover. A specification-mediated clean-room verification independently passed
+all 38 serialized cover files.
 
 This is an independent technical audit. It is not peer review or a formal
 proof. The report states the assumptions and remaining assurance gap.
@@ -29,6 +30,10 @@ proof. The report states the assumptions and remaining assurance gap.
   results, and environment details.
 - [`specification/RID-COVER-SPEC.md`](specification/RID-COVER-SPEC.md): neutral,
   versioned `rid-cover/1` specification for a second clean-room checker.
+- [`comparison-v2/README.md`](comparison-v2/README.md): post-freeze comparison
+  and adjudication of the source-isolated checker.
+- [`comparison-v2/comparison.json`](comparison-v2/comparison.json):
+  machine-readable per-file comparison record.
 - [`logs/audit-run.json`](logs/audit-run.json): the recorded first audit run.
 - [`scripts/reproduce.sh`](scripts/reproduce.sh): a clean, full reproduction.
 - [`scripts/build-report.sh`](scripts/build-report.sh): the PDF build.
@@ -54,12 +59,19 @@ Pass a new directory when the default `work` directory already exists:
 ./scripts/reproduce.sh work-2
 ```
 
-The run checks the certificate, runs both checker implementations, regenerates
-the certificate, compares it byte for byte, and rebuilds all 11,183 zoom cells.
+The run checks the certificate, runs both supplied checker implementations,
+regenerates the certificate, compares it byte for byte, and rebuilds all
+11,183 witness leaves. The upstream loader and adversarial tests validate the
+48 delegated leaves.
 
 The complete runner passed from a separate checkout on 2026-10-08. It accepted
-all 192,696 records, passed 393 ordinary tests, accepted all 11,183 zoom cells,
-and regenerated the certificate byte for byte.
+all 192,696 records, passed 393 ordinary tests, accepted all 11,183 witness
+leaves, and regenerated the certificate byte for byte.
+
+The frozen source-isolated checker was reproduced on 2026-10-09. Its 13 tests
+and all 38 cover files passed. It validated 11,183 witness leaves and 48
+delegated leaves, for 11,231 terminal leaves. Its non-runtime result matched
+the frozen result exactly.
 
 ## Rebuild the report
 
@@ -79,6 +91,11 @@ The model read the mathematical argument before treating the programs as
 authoritative. It then tried to break the zoom lemma and the reduction to the
 finite cover. Every quantitative claim in the report is tied to an executable
 check, a recorded output, or a named mathematical argument.
+
+A separate session derived a neutral specification from the pinned upstream
+implementation. A fresh source-isolated session implemented that
+specification before it could inspect upstream code, earlier checkers, audit
+verdicts, or comparison material. Post-freeze comparison found full agreement.
 
 ## Citation
 

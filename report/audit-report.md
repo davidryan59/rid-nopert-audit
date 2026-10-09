@@ -1,7 +1,7 @@
 # Independent Audit of the Nopert Certificate for the Rhombicosidodecahedron
 
 **David Ryan**  
-Version 0.1.0, 2026-10-08  
+Version 0.1.0, 2026-10-09<br>
 DOI: [10.5281/zenodo.23232399](https://doi.org/10.5281/zenodo.23232399)
 
 ## Abstract
@@ -19,15 +19,17 @@ certificate exactly. Its SHA-256 hash matched the supplied certificate.
 
 The review concentrated on the zoom lemma and the reduction from all possible
 passages to a finite local cover. No mathematical gap was found. The
-repository's exhaustive second Rust model also rebuilt and accepted all
-11,183 zoom cells.
+repository's exhaustive second Rust model rebuilt all 11,183 witness leaves.
+A source-isolated checker also validated the 48 delegated leaves, for 11,231
+terminal leaves in total.
 
 > **Outcome: confirmed subject to stated assumptions.**
 
-The strongest further assurance would be an externally authored clean-room
-checker for the 38 zoom covers. The supplied Python checker treats those cover
-proofs as inputs. Hervay's second Rust model checks them independently at the
-proof-structure level, while sharing the repository's arithmetic layer.
+The specification-mediated clean-room verification checked all 38 zoom covers
+with a fresh implementation. Its neutral specification was derived from the
+pinned upstream implementation. The implementation had no access to upstream
+source, earlier checker source, audit verdicts, or comparison material before
+its result was frozen.
 
 ## 1. Scope and disclosure
 
@@ -68,7 +70,7 @@ version.
 
 ## 3. Audit method
 
-The audit used four layers.
+The audit used five layers.
 
 First, it read the article's argument and traced each reduction into the code.
 This review covered projected containment, centring, symmetry, branch and
@@ -84,6 +86,10 @@ Fourth, it attacked the proof's choke points. The audit inspected cover
 completeness, divisibility factors, no-fit sets, support conditions, hand-over
 maps, and domain extensions. It also ran the repository's exhaustive second
 cover model and the supplied mutation controls.
+
+Fifth, a specification-mediated clean-room verification implemented the cover
+format from a neutral specification. A separate post-freeze session compared
+that checker with the pinned implementation and the earlier audit.
 
 ## 4. Mathematical audit
 
@@ -186,7 +192,8 @@ would give a contradiction.
 | Clean Rust search | 385,391 boxes evaluated; 192,696 records; 89.764 seconds |
 | Search comparison | Byte-identical to the supplied certificate |
 | Ordinary Rust tests | 393 proof and integration tests passed |
-| Exhaustive second cover model | Four partitions passed; 11,183 zoom cells accepted |
+| Exhaustive second cover model | Four partitions passed; 11,183 witness leaves accepted |
+| Source-isolated cover checker | 13 tests and 38 files passed; 11,231 terminal leaves validated |
 
 The regenerated certificate had SHA-256
 `df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f`.
@@ -218,12 +225,94 @@ The Rust tests mutate records, witnesses, checksums, cover cells, tilings,
 factors, zoom maps, window delegations, and inclusion boxes. The checker
 refused corrupt inputs or independently confirmed the surviving claim.
 
-The exhaustive ignored test reconstructs each cover from its definitions. It
-rebuilds zoom families, witness polynomials, monomial division, Bernstein
-coefficients, cell trees, the hand-over, and the pentagon extension. All four
-partitions passed in 515.21 seconds.
+The exhaustive ignored test reconstructs each witness leaf from its
+definitions. It rebuilds zoom families, witness polynomials, monomial division,
+Bernstein coefficients, cell trees, and the pentagon extension. All four
+partitions passed in 515.21 seconds. The cover loader and separate adversarial
+tests validate the 48 delegated leaves and their hand-over maps.
 
-## 7. Qualifications and assumptions
+## 7. Clean-room method and independence
+
+The first clean-room attempt used only the article and the 38 serialized cover
+files. Its [freeze record](../clean-room/FREEZE.md) preserved an inconclusive
+result. Its [working specification](../clean-room/SPECIFICATION.md) could parse
+the trees and count 11,231 leaves, but it could not assign mathematical meaning
+to every field.
+
+That attempt identified eleven missing `rid-cover/1` conventions:
+
+1. vertex numbering;
+2. domain-inequality numbering;
+3. affine-map convention;
+4. adapted coordinate systems;
+5. zoom inventory and ordering;
+6. zoom-variable ordering;
+7. face and radius ordering;
+8. tree grammar and leaf association;
+9. witness semantics and Bernstein sign;
+10. delegated hand-over; and
+11. pentagon extension and complete JSON encoding.
+
+A separate specification session inspected the pinned upstream source. It
+produced the neutral [`rid-cover/1-spec.1`](../specification/RID-COVER-SPEC.md)
+specification. The package records its
+[`provenance`](../specification/PROVENANCE.json),
+[`version`](../specification/VERSION.json), and
+[`checksums`](../specification/SHA256SUMS). It supplied declarative rules,
+canonical data tables, the version record, provenance, and hashes. The
+specification manifest has SHA-256
+`5f0f6e67a0ba7cf121750aa1ef4f09b86896303adcda467e2216b7f918e5296f`.
+
+The fresh implementation session could read that package, the article, and the
+38 accepted input files. It could not read upstream source, the first checker,
+previous audit reports or verdicts, or comparison material. Its
+[`boundary record`](../clean-room-v2/BOUNDARY.md) states these controls. The
+implementation was source-isolated. Its neutral specification was derived
+from the pinned upstream implementation, so this second checker was not an
+article-only checker.
+
+Before comparison, the session passed 13 unit and mutation tests and all 38
+cover files. The [`freeze record`](../clean-room-v2/FREEZE.md),
+[`run record`](../clean-room-v2/RUN-RECORD.md), and
+[`result manifest`](../clean-room-v2/RESULT-MANIFEST.json) preserve that
+outcome. The source-manifest hash is
+`3d8cca95ce326b8835104171fe0ed16d67d5b5895767b5ddd424546ba085abc7`.
+The result-manifest hash is
+`f9791caaf628ff79d6c9b6a680cca1aefeec748d6d7c154a51322ed65371c8b4`.
+The full frozen checksum record is
+[`FROZEN-SHA256SUMS`](../clean-room-v2/FROZEN-SHA256SUMS).
+
+The pre-comparison result was a pass. It verified 11,183 witness leaves and 48
+delegated leaves, which give 11,231 terminal leaves. It performed 357,856
+corner evaluations and checked 1,260,757 Bernstein coefficients.
+
+The post-freeze comparison first repeated the checker from a fresh source-only
+temporary copy. It used Python's `-B` option and created no bytecode cache. The
+13 tests and all 38 files passed again. Every non-runtime field matched the
+frozen result.
+
+Only then did the comparison inspect upstream and previous audit material. It
+checked all eleven conventions against commit
+`802a3ded09535c4a99cef1371ce0d0277c433fa8`. It also audited every checker
+obligation and fail-closed path. The detailed
+[`comparison report`](../comparison-v2/README.md) and
+[`machine record`](../comparison-v2/comparison.json) record the evidence.
+
+The comparison confirmed the checker, specification, and 38 proof files. It
+also corrected one earlier phrase. The number 11,183 is the witness-leaf
+count. The 48 delegated leaves bring the terminal total to 11,231. This
+wording correction does not change the verdict.
+
+The preliminary procedural stop concerned ignored `.pyc` cache files outside
+the frozen evidence set. Those files could not affect an input, specification,
+executed source, result, or information boundary. The source-only reproduction
+resolved the execution question. The stop was not an audit finding.
+
+Post-comparison checks confirmed every frozen hash. No tracked file under
+`clean-room-v2/` changed. The remaining uncertainty is limited to the general
+execution, arithmetic-library, and provenance assumptions stated below.
+
+## 8. Qualifications and assumptions
 
 The default Rust test command reported two failures on the audit Mac. One test
 uses Linux `prlimit`, which macOS lacks. One scheduler performance test crossed
@@ -233,11 +322,11 @@ utilisation. Neither enters the mathematical proof checker.
 Every other ordinary unit and integration test passed after those exclusions.
 The proof-relevant exhaustive test also passed.
 
-The Python checker independently verifies certificate records, framing, and
-coverage. It treats the zoom-cover cell proofs as checked inputs. The
-repository's exhaustive second Rust model checks those cells through a
-separate proof implementation. It still shares the repository and low-level
-arithmetic layer.
+The original Python checker independently verifies certificate records,
+framing, and coverage. It treats the zoom-cover cell proofs as checked inputs.
+The upstream exhaustive Rust model rebuilds the witness leaves while sharing
+the repository's arithmetic layer. The source-isolated checker removes that
+shared-code dependence for all 38 serialized covers.
 
 The verdict assumes:
 
@@ -246,22 +335,22 @@ The verdict assumes:
 - Python FLINT correctly implements integer and rational arithmetic.
 - The operating system and compiler executed the checked source faithfully.
 
-Cross-language agreement reduces arithmetic risk. A formal kernel or an
-externally authored cover checker would provide stronger assurance.
+Cross-language and source-isolated agreement reduce arithmetic and
+implementation risk. A formal kernel would provide stronger assurance.
 
-## 8. Conclusion
+## 9. Conclusion
 
 The mathematical reduction survived adversarial review. Both supplied
 checkers accepted every certificate record. The clean search reproduced the
-certificate exactly. The exhaustive second model accepted every zoom cell.
+certificate exactly. The upstream second model accepted every witness leaf.
+The source-isolated checker validated every witness and delegated leaf.
 
 The audit therefore confirms Hervay's proof that the rhombicosidodecahedron is
 Nopert, subject to the stated assumptions.
 
-The next useful contribution is a clean-room implementation of the 38 zoom
-covers. It should use its own coordinate maps, polynomial division, and cover
-logic. That implementation would reduce the remaining shared-code risk and
-provide a reusable checker architecture for future Nopert results.
+The specification-mediated clean-room verification confirms all 38 covers.
+Its post-freeze comparison found no unresolved discrepancy. The remaining
+assumptions concern provenance and faithful execution of exact arithmetic.
 
 ## References
 

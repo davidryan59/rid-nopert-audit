@@ -1,0 +1,172 @@
+{
+  "schema": "rid-cover-comparison/2",
+  "date": "2026-10-09",
+  "status": "confirmed",
+  "pre_comparison_commit": "5e82692009619507f47d4a915aa5868e03fe6e31",
+  "upstream_commit": "802a3ded09535c4a99cef1371ce0d0277c433fa8",
+  "environment": {
+    "date": "2026-10-09",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "operating_system": "macOS 26.6.2",
+    "kernel": "Darwin 25.6.0",
+    "architecture": "arm64",
+    "python": "3.8.13",
+    "cargo": null
+  },
+  "specification": {
+    "version": "rid-cover/1-spec.1",
+    "manifest_sha256": "5f0f6e67a0ba7cf121750aa1ef4f09b86896303adcda467e2216b7f918e5296f",
+    "provenance_source_files": 16,
+    "provenance_hashes_match": true,
+    "areas_checked": 11,
+    "areas_matching": 11,
+    "source_code_copied": false,
+    "upstream_source_sha256": {
+      "proof/src/arithmetic/exact/mod.rs": "63ab26e3fb62bc4117d4a0048065b65d396aca8f158a2249c417fc3a53dc802d",
+      "proof/src/arithmetic/polynomial/mod.rs": "e22c318c70d3479096b0eb25acefa5f961c7928b21cb64801413a2b7074b2e32",
+      "proof/src/arithmetic/polynomial/bernstein.rs": "3cfed598ce29bb163d540b21b6402b203ff82c0cc949d8eea351478014ed7afe",
+      "proof/src/problem/configuration/mod.rs": "bcd2bf457f4a7c10075a9bb8b62f448ac1b379bf2d1f42237ff7e42443945fdb",
+      "proof/src/problem/geometry/mod.rs": "12d35ff06c9ccbdf5f489cd373e0d552ffaafb24fee3b0c0a116cb8f622a16de",
+      "proof/src/problem/domain/mod.rs": "291aee296f7b34f337c90060b7bcbd60f1228c213de625f3518c5e0dc38f011e",
+      "proof/src/elimination/zoom/mod.rs": "06d6bf747c96448c6d21f4c4d002983a6e05f2aada4fab571090341db04583c1",
+      "proof/src/elimination/zoom/cover/mod.rs": "7beea498d6a0488aaf8cafa0880a54e89819c59e2d31ee6c4be07a9d16cfec28",
+      "proof/src/elimination/zoom/cover/parameters.rs": "fda7da4946750b182b953e9f73bb3717bd4903c3f6f5cbec29612560284150a7",
+      "proof/src/elimination/zoom/cover/coverage.rs": "f57a030c2cd80876643f2c058ae11c6dd83c7d7adec4da4c54d62c86cc58a0b9",
+      "proof/src/elimination/zoom/tree/mod.rs": "151cc872cc9d3a3ea96ac79f6fedd7db242433bdbd62533954c322447dbe241c",
+      "proof/src/elimination/witness/mod.rs": "ae8c6f60a698dfeda11913ea1ef94f177aa696a353a69ef5ec1b28689f9fa067",
+      "proof/src/elimination/lemma/mod.rs": "b4cb788dca4bed70fc5555049e0ffda1a8745e9b7c4321fab3125b9dda8e0ddf",
+      "proof/src/elimination/proof/format/mod.rs": "662ceda6d527f83a91aff7e7fea827e675ca0ad37da17b11b5fe0b501be436ce",
+      "proof/src/elimination/proof/mod.rs": "060bd30d9a512e3a81c8f91d5e829591387746bb7c19ad36eb5b4ad71b82bb3f",
+      "proof/src/elimination/proof/catalogue/mod.rs": "d52bc486b03bbd90012e765d8438ec585f943c985f238f6acc10c95f3c6f34e3"
+    }
+  },
+  "frozen_evidence": {
+    "source_manifest_sha256": "3d8cca95ce326b8835104171fe0ed16d67d5b5895767b5ddd424546ba085abc7",
+    "result_manifest_sha256": "f9791caaf628ff79d6c9b6a680cca1aefeec748d6d7c154a51322ed65371c8b4",
+    "input_manifest_sha256": "3e7361ad7567d40cc2eb561b5e7a28014acbb65e68b284a246b65d85090bf8c3",
+    "frozen_checksums_sha256": "7e9d36d44d00f33c8f2847711aa3d349ecfcf47dfd6584b5d8386e5b61af085c",
+    "nested_checks_passed_before_comparison": true,
+    "nested_checks_passed_after_comparison": true,
+    "tracked_files_changed": 0
+  },
+  "procedural_stop": {
+    "preliminary_status": "inconclusive",
+    "cause": "An incorrect checkpoint required every file under clean-room-v2 to be tracked by Git.",
+    "cache_files": [
+      "clean-room-v2/__pycache__/checker.cpython-38.pyc",
+      "clean-room-v2/__pycache__/test_checker.cpython-38.pyc"
+    ],
+    "outside_frozen_evidence_set": true,
+    "audit_finding": false,
+    "mathematical_uncertainty": false,
+    "resolved_by_source_only_reproduction": true
+  },
+  "reproduction": {
+    "source_only": true,
+    "python": "3.8.13",
+    "python_no_bytecode_flag": true,
+    "initial_pyc_files": 0,
+    "final_pyc_files": 0,
+    "tests_passed": 13,
+    "tests_failed": 0,
+    "cover_files_passed": 38,
+    "cover_files_failed": 0,
+    "diagnostics": 0,
+    "runtime_seconds": 1439.177905,
+    "result_sha256": "a3bb8bbd8b5522820ac58f34ba2f98380002ee7037b2d6a2aae2e2d13feb95ec",
+    "non_runtime_fields_match_frozen": true
+  },
+  "totals": {
+    "terminal_leaves": 11231,
+    "witness_leaves": 11183,
+    "delegated_leaves": 48,
+    "corner_evaluations": 357856,
+    "bernstein_coefficients": 1260757
+  },
+  "comparators": {
+    "initial_article_only_clean_room": "inconclusive",
+    "frozen_checker": "pass",
+    "source_only_reproduction": "pass",
+    "pinned_upstream_checker": "pass",
+    "upstream_exhaustive_witness_model": "pass",
+    "original_audit_reproduction": "pass",
+    "regenerated_certificate_byte_identical": true
+  },
+  "upstream_execution_evidence": {
+    "rerun_in_comparison_session": false,
+    "reason": "Cargo was unavailable in the comparison shell.",
+    "retained_log": "clean-room/results/upstream-zoom.log",
+    "original_audit_run": "logs/audit-run.json",
+    "fresh_detached_checkout_hashes_match": true
+  },
+  "classifications": {
+    "invalid_cover_file": 0,
+    "specification_defect_or_omission": 0,
+    "frozen_checker_defect": 0,
+    "upstream_implementation_defect": 0,
+    "previous_audit_defect": 1,
+    "harmless_presentation_or_counting_difference": 1,
+    "unresolved": 0
+  },
+  "discrepancies": [
+    {
+      "id": "witness-versus-terminal-leaf-count",
+      "classification": "previous-audit defect",
+      "description": "Earlier wording called 11,183 witness leaves zoom cells without stating the 48 delegated leaves.",
+      "effect": "The correct terminal total is 11,231. The effect is presentational, and the verdict is unchanged."
+    },
+    {
+      "id": "runtime-variation",
+      "classification": "harmless presentation difference",
+      "description": "Frozen and reproduced runtime fields differ.",
+      "effect": "Runtime was excluded by design; every verification field agrees."
+    }
+  ],
+  "conclusions": {
+    "conformance_to_specification": "confirmed",
+    "specification_fidelity_to_pinned_implementation": "confirmed",
+    "serialized_proof_data_validity": "confirmed",
+    "independent_and_upstream_checker_agreement": "confirmed",
+    "mathematical_conclusion": "confirmed subject to the report's stated assumptions"
+  },
+  "per_file": [
+    {"path":"exotic/arc+.json","sha256":"cce4c32823bcbf156841affd76019b5f538688000d2656c1b9efe96a4b809dd3","verdict":"pass","terminal_leaves":343,"witness_leaves":343,"delegated_leaves":0,"corner_evaluations":10976,"bernstein_coefficients":46020,"upstream_witness_leaves":343,"matches":true},
+    {"path":"exotic/arc-.json","sha256":"780e5c2da5b0e4c055b2f9ebef52ee779306070ed185b515713e2e6348da7902","verdict":"pass","terminal_leaves":288,"witness_leaves":288,"delegated_leaves":0,"corner_evaluations":9216,"bernstein_coefficients":30466,"upstream_witness_leaves":288,"matches":true},
+    {"path":"exotic/crossing+.json","sha256":"2c0dececdf804bcbe555f86440e3ecdcd992f54390eb87dcafbb27ed54e572f8","verdict":"pass","terminal_leaves":1465,"witness_leaves":1431,"delegated_leaves":34,"corner_evaluations":45792,"bernstein_coefficients":231795,"upstream_witness_leaves":1431,"matches":true},
+    {"path":"exotic/crossing-.json","sha256":"954b9bc7dbbad19f1d087b8577f5eda233b37463eccc61c9aa05d68763de5483","verdict":"pass","terminal_leaves":701,"witness_leaves":687,"delegated_leaves":14,"corner_evaluations":21984,"bernstein_coefficients":90802,"upstream_witness_leaves":687,"matches":true},
+    {"path":"exotic/endpoint+.json","sha256":"87fad6a208c5723e35be3857f90dffe4d658d74b91ff4309b28db2191f07c38a","verdict":"pass","terminal_leaves":305,"witness_leaves":305,"delegated_leaves":0,"corner_evaluations":9760,"bernstein_coefficients":51409,"upstream_witness_leaves":305,"matches":true},
+    {"path":"exotic/endpoint-.json","sha256":"774494ad651f3000de2ec3caee74dc487be7139e6e9ef653ae539537844ccfad","verdict":"pass","terminal_leaves":246,"witness_leaves":246,"delegated_leaves":0,"corner_evaluations":7872,"bernstein_coefficients":36256,"upstream_witness_leaves":246,"matches":true},
+    {"path":"exotic/pentagon.json","sha256":"4bb0475a48dfa9cded9ae556532e477e6f1c205325cb0aedcb510d4e45845a94","verdict":"pass","terminal_leaves":6173,"witness_leaves":6173,"delegated_leaves":0,"corner_evaluations":197536,"bernstein_coefficients":629568,"upstream_witness_leaves":6173,"matches":true},
+    {"path":"exotic/square.json","sha256":"51ddfbabf8a3983e6cdb13efaa51c694434289d7364258743031f4d136d8d63a","verdict":"pass","terminal_leaves":877,"witness_leaves":877,"delegated_leaves":0,"corner_evaluations":28064,"bernstein_coefficients":85113,"upstream_witness_leaves":877,"matches":true},
+    {"path":"local/0.json","sha256":"c2a61a0c9aafe21986a221153baa89fd7e0f6d37365630064a778c44edfa2b5b","verdict":"pass","terminal_leaves":24,"witness_leaves":24,"delegated_leaves":0,"corner_evaluations":768,"bernstein_coefficients":1728,"upstream_witness_leaves":24,"matches":true},
+    {"path":"local/1.json","sha256":"06ec2a649c1c61f1ba7014999685f97a1f7607508ad0eedadac693be718934ad","verdict":"pass","terminal_leaves":45,"witness_leaves":45,"delegated_leaves":0,"corner_evaluations":1440,"bernstein_coefficients":3240,"upstream_witness_leaves":45,"matches":true},
+    {"path":"local/10.json","sha256":"f2caebba73a3946bf8116ca93d97cdb24f8c7e6f27b9408eea4c5dea25d5fd65","verdict":"pass","terminal_leaves":15,"witness_leaves":15,"delegated_leaves":0,"corner_evaluations":480,"bernstein_coefficients":1080,"upstream_witness_leaves":15,"matches":true},
+    {"path":"local/11.json","sha256":"7d9f9471f6add649b524875fb7e9e2f78ab89bafaad30b91e26464d70113e431","verdict":"pass","terminal_leaves":12,"witness_leaves":12,"delegated_leaves":0,"corner_evaluations":384,"bernstein_coefficients":864,"upstream_witness_leaves":12,"matches":true},
+    {"path":"local/12.json","sha256":"bed479f93fb379b5e25fddaa6b3c292db324771deeafb27fe92d06cf845ac43b","verdict":"pass","terminal_leaves":49,"witness_leaves":49,"delegated_leaves":0,"corner_evaluations":1568,"bernstein_coefficients":3528,"upstream_witness_leaves":49,"matches":true},
+    {"path":"local/13.json","sha256":"cc71df9211be258fda49e43af4db350ea72bb3918f9a9fdd554793b9e1fbb3e9","verdict":"pass","terminal_leaves":12,"witness_leaves":12,"delegated_leaves":0,"corner_evaluations":384,"bernstein_coefficients":864,"upstream_witness_leaves":12,"matches":true},
+    {"path":"local/14.json","sha256":"cc6d4cce39ae88503fe85cc352307a78cee30cea5684e9151ecb597f9babcfd2","verdict":"pass","terminal_leaves":45,"witness_leaves":45,"delegated_leaves":0,"corner_evaluations":1440,"bernstein_coefficients":3240,"upstream_witness_leaves":45,"matches":true},
+    {"path":"local/15.json","sha256":"609b9fb03a3b513de37c267601f57b65dfeaaf9b46c7f12d5247b265166ff357","verdict":"pass","terminal_leaves":15,"witness_leaves":15,"delegated_leaves":0,"corner_evaluations":480,"bernstein_coefficients":1080,"upstream_witness_leaves":15,"matches":true},
+    {"path":"local/16.json","sha256":"7cb46fe5a6ac8c74f7a5da4e1725dc010ef46c390f8b253d9f8702900763aba7","verdict":"pass","terminal_leaves":39,"witness_leaves":39,"delegated_leaves":0,"corner_evaluations":1248,"bernstein_coefficients":2736,"upstream_witness_leaves":39,"matches":true},
+    {"path":"local/17.json","sha256":"12a10b70fccb883e27b70d9722ac4bde310abc66f81d9962338e53db76d8e59e","verdict":"pass","terminal_leaves":22,"witness_leaves":22,"delegated_leaves":0,"corner_evaluations":704,"bernstein_coefficients":1584,"upstream_witness_leaves":22,"matches":true},
+    {"path":"local/18.json","sha256":"4342254b7c7259b28fd28a93be26e91ac45db4db463dc993cd70775f20e035f9","verdict":"pass","terminal_leaves":19,"witness_leaves":19,"delegated_leaves":0,"corner_evaluations":608,"bernstein_coefficients":1368,"upstream_witness_leaves":19,"matches":true},
+    {"path":"local/19.json","sha256":"c6744a6e152b3332914dda545e11a6157f6478b960332036ae1c2167cacc2f43","verdict":"pass","terminal_leaves":67,"witness_leaves":67,"delegated_leaves":0,"corner_evaluations":2144,"bernstein_coefficients":4860,"upstream_witness_leaves":67,"matches":true},
+    {"path":"local/2.json","sha256":"2545744879795aec70158e30bc420afe79ca3935c0b95d9aa99a6e52bd08b030","verdict":"pass","terminal_leaves":26,"witness_leaves":26,"delegated_leaves":0,"corner_evaluations":832,"bernstein_coefficients":1872,"upstream_witness_leaves":26,"matches":true},
+    {"path":"local/20.json","sha256":"fb0e6cbf10e2f0f6145768e6e3fa5fbd900acc7588445a45143d5d610df23605","verdict":"pass","terminal_leaves":17,"witness_leaves":17,"delegated_leaves":0,"corner_evaluations":544,"bernstein_coefficients":1224,"upstream_witness_leaves":17,"matches":true},
+    {"path":"local/21.json","sha256":"e3a3710906a99a46f58ae5108dfadc51529eb0362cd46cff24f45d30fa87a413","verdict":"pass","terminal_leaves":25,"witness_leaves":25,"delegated_leaves":0,"corner_evaluations":800,"bernstein_coefficients":1800,"upstream_witness_leaves":25,"matches":true},
+    {"path":"local/22.json","sha256":"7cb0c6f4e3db7198ee0faf6ea94f999282ac96be61672a1f361b2dcf19182f04","verdict":"pass","terminal_leaves":31,"witness_leaves":31,"delegated_leaves":0,"corner_evaluations":992,"bernstein_coefficients":2232,"upstream_witness_leaves":31,"matches":true},
+    {"path":"local/23.json","sha256":"ca0123959eb89a9dc47b74dbf63735b269b895ca12c15be4fc465a5e9f9a2df5","verdict":"pass","terminal_leaves":35,"witness_leaves":35,"delegated_leaves":0,"corner_evaluations":1120,"bernstein_coefficients":2520,"upstream_witness_leaves":35,"matches":true},
+    {"path":"local/24.json","sha256":"43fd7e59844363b7c333402f145f701238544defc78005b97ae75224ec629d1d","verdict":"pass","terminal_leaves":17,"witness_leaves":17,"delegated_leaves":0,"corner_evaluations":544,"bernstein_coefficients":1224,"upstream_witness_leaves":17,"matches":true},
+    {"path":"local/25.json","sha256":"45e12d882a0e9e6cae90812d55ca2d5eebf59da96d6a2981893152058db35ddd","verdict":"pass","terminal_leaves":29,"witness_leaves":29,"delegated_leaves":0,"corner_evaluations":928,"bernstein_coefficients":2088,"upstream_witness_leaves":29,"matches":true},
+    {"path":"local/26.json","sha256":"4c34179251e2cb21c30dde5fd51da63f8087abe6161b99cf1d5073723488eac4","verdict":"pass","terminal_leaves":19,"witness_leaves":19,"delegated_leaves":0,"corner_evaluations":608,"bernstein_coefficients":1296,"upstream_witness_leaves":19,"matches":true},
+    {"path":"local/27.json","sha256":"223862b03fff1b9fd1d46b5cf46ac9027691ece49fa32a464bd1248fc915a936","verdict":"pass","terminal_leaves":17,"witness_leaves":17,"delegated_leaves":0,"corner_evaluations":544,"bernstein_coefficients":1224,"upstream_witness_leaves":17,"matches":true},
+    {"path":"local/28.json","sha256":"68ca47614f02868c14eca261723071bfa10e351df79a1fc5076b7d2096727100","verdict":"pass","terminal_leaves":11,"witness_leaves":11,"delegated_leaves":0,"corner_evaluations":352,"bernstein_coefficients":720,"upstream_witness_leaves":11,"matches":true},
+    {"path":"local/29.json","sha256":"1e3209209fedfadcc211aba16f8b9bfe53e46962f36c82d405693d838131d57e","verdict":"pass","terminal_leaves":85,"witness_leaves":85,"delegated_leaves":0,"corner_evaluations":2720,"bernstein_coefficients":5652,"upstream_witness_leaves":85,"matches":true},
+    {"path":"local/3.json","sha256":"dea611bfdf0a9bef837916aaefc88b602de3e38737f4e386eae09d4b584363a0","verdict":"pass","terminal_leaves":27,"witness_leaves":27,"delegated_leaves":0,"corner_evaluations":864,"bernstein_coefficients":1944,"upstream_witness_leaves":27,"matches":true},
+    {"path":"local/4.json","sha256":"9cbb6122e4d7af78c1dcc928c6626c9eb381dab6495782070ee0ab13eca85de3","verdict":"pass","terminal_leaves":16,"witness_leaves":16,"delegated_leaves":0,"corner_evaluations":512,"bernstein_coefficients":1152,"upstream_witness_leaves":16,"matches":true},
+    {"path":"local/5.json","sha256":"ed38accfeb05a807eabe4d58fe136f6adee11ccfb948de895043e3169ee44888","verdict":"pass","terminal_leaves":20,"witness_leaves":20,"delegated_leaves":0,"corner_evaluations":640,"bernstein_coefficients":1440,"upstream_witness_leaves":20,"matches":true},
+    {"path":"local/6.json","sha256":"49439bb5fd81182dc57ff4f6f2823b558bce931c249c0320b82ce977080f3be4","verdict":"pass","terminal_leaves":18,"witness_leaves":18,"delegated_leaves":0,"corner_evaluations":576,"bernstein_coefficients":1296,"upstream_witness_leaves":18,"matches":true},
+    {"path":"local/7.json","sha256":"0aeac172c6cd0ebd36602eb84daa1f8f5444b723d438265d6d66ca78201fa050","verdict":"pass","terminal_leaves":27,"witness_leaves":27,"delegated_leaves":0,"corner_evaluations":864,"bernstein_coefficients":1944,"upstream_witness_leaves":27,"matches":true},
+    {"path":"local/8.json","sha256":"7d54bfcb5c7e9b0fc62361629ac858a8d325c999b3b10567d912ce93a98648d3","verdict":"pass","terminal_leaves":15,"witness_leaves":15,"delegated_leaves":0,"corner_evaluations":480,"bernstein_coefficients":1080,"upstream_witness_leaves":15,"matches":true},
+    {"path":"local/9.json","sha256":"de912b8e9e5db3ce3762db1ddd71126dc72139ce72dc80de9aa0bc181ae19d5e","verdict":"pass","terminal_leaves":34,"witness_leaves":34,"delegated_leaves":0,"corner_evaluations":1088,"bernstein_coefficients":2448,"upstream_witness_leaves":34,"matches":true}
+  ]
+}
