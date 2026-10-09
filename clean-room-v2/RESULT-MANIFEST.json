@@ -1,0 +1,581 @@
+{
+  "format": "rid-cover-clean-room-result/1",
+  "specification_version": "rid-cover/1-spec.1",
+  "checker": "clean-room-v2",
+  "arithmetic": "exact Q(sqrt(5))",
+  "verdict": "pass",
+  "cover_count": 38,
+  "results": [
+    {
+      "path": "exotic/arc+.json",
+      "sha256": "cce4c32823bcbf156841affd76019b5f538688000d2656c1b9efe96a4b809dd3",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 7,
+        "leaves": 343,
+        "witness_leaves": 343,
+        "delegated_leaves": 0,
+        "corner_evaluations": 10976,
+        "bernstein_coefficients": 46020
+      },
+      "runtime_seconds": 42.992472
+    },
+    {
+      "path": "exotic/arc-.json",
+      "sha256": "780e5c2da5b0e4c055b2f9ebef52ee779306070ed185b515713e2e6348da7902",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 7,
+        "leaves": 288,
+        "witness_leaves": 288,
+        "delegated_leaves": 0,
+        "corner_evaluations": 9216,
+        "bernstein_coefficients": 30466
+      },
+      "runtime_seconds": 29.333906
+    },
+    {
+      "path": "exotic/crossing+.json",
+      "sha256": "2c0dececdf804bcbe555f86440e3ecdcd992f54390eb87dcafbb27ed54e572f8",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 28,
+        "leaves": 1465,
+        "witness_leaves": 1431,
+        "delegated_leaves": 34,
+        "corner_evaluations": 45792,
+        "bernstein_coefficients": 231795
+      },
+      "runtime_seconds": 213.111321
+    },
+    {
+      "path": "exotic/crossing-.json",
+      "sha256": "954b9bc7dbbad19f1d087b8577f5eda233b37463eccc61c9aa05d68763de5483",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 28,
+        "leaves": 701,
+        "witness_leaves": 687,
+        "delegated_leaves": 14,
+        "corner_evaluations": 21984,
+        "bernstein_coefficients": 90802
+      },
+      "runtime_seconds": 77.984648
+    },
+    {
+      "path": "exotic/endpoint+.json",
+      "sha256": "87fad6a208c5723e35be3857f90dffe4d658d74b91ff4309b28db2191f07c38a",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 21,
+        "leaves": 305,
+        "witness_leaves": 305,
+        "delegated_leaves": 0,
+        "corner_evaluations": 9760,
+        "bernstein_coefficients": 51409
+      },
+      "runtime_seconds": 43.863451
+    },
+    {
+      "path": "exotic/endpoint-.json",
+      "sha256": "774494ad651f3000de2ec3caee74dc487be7139e6e9ef653ae539537844ccfad",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 21,
+        "leaves": 246,
+        "witness_leaves": 246,
+        "delegated_leaves": 0,
+        "corner_evaluations": 7872,
+        "bernstein_coefficients": 36256
+      },
+      "runtime_seconds": 29.298465
+    },
+    {
+      "path": "exotic/pentagon.json",
+      "sha256": "4bb0475a48dfa9cded9ae556532e477e6f1c205325cb0aedcb510d4e45845a94",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 24,
+        "leaves": 6173,
+        "witness_leaves": 6173,
+        "delegated_leaves": 0,
+        "corner_evaluations": 197536,
+        "bernstein_coefficients": 629568
+      },
+      "runtime_seconds": 814.910696
+    },
+    {
+      "path": "exotic/square.json",
+      "sha256": "51ddfbabf8a3983e6cdb13efaa51c694434289d7364258743031f4d136d8d63a",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 18,
+        "leaves": 877,
+        "witness_leaves": 877,
+        "delegated_leaves": 0,
+        "corner_evaluations": 28064,
+        "bernstein_coefficients": 85113
+      },
+      "runtime_seconds": 94.710493
+    },
+    {
+      "path": "local/0.json",
+      "sha256": "c2a61a0c9aafe21986a221153baa89fd7e0f6d37365630064a778c44edfa2b5b",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 24,
+        "witness_leaves": 24,
+        "delegated_leaves": 0,
+        "corner_evaluations": 768,
+        "bernstein_coefficients": 1728
+      },
+      "runtime_seconds": 2.543108
+    },
+    {
+      "path": "local/1.json",
+      "sha256": "06ec2a649c1c61f1ba7014999685f97a1f7607508ad0eedadac693be718934ad",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 45,
+        "witness_leaves": 45,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1440,
+        "bernstein_coefficients": 3240
+      },
+      "runtime_seconds": 4.766524
+    },
+    {
+      "path": "local/10.json",
+      "sha256": "f2caebba73a3946bf8116ca93d97cdb24f8c7e6f27b9408eea4c5dea25d5fd65",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 15,
+        "witness_leaves": 15,
+        "delegated_leaves": 0,
+        "corner_evaluations": 480,
+        "bernstein_coefficients": 1080
+      },
+      "runtime_seconds": 1.616523
+    },
+    {
+      "path": "local/11.json",
+      "sha256": "7d9f9471f6add649b524875fb7e9e2f78ab89bafaad30b91e26464d70113e431",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 12,
+        "witness_leaves": 12,
+        "delegated_leaves": 0,
+        "corner_evaluations": 384,
+        "bernstein_coefficients": 864
+      },
+      "runtime_seconds": 1.321792
+    },
+    {
+      "path": "local/12.json",
+      "sha256": "bed479f93fb379b5e25fddaa6b3c292db324771deeafb27fe92d06cf845ac43b",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 49,
+        "witness_leaves": 49,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1568,
+        "bernstein_coefficients": 3528
+      },
+      "runtime_seconds": 5.484773
+    },
+    {
+      "path": "local/13.json",
+      "sha256": "cc71df9211be258fda49e43af4db350ea72bb3918f9a9fdd554793b9e1fbb3e9",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 12,
+        "witness_leaves": 12,
+        "delegated_leaves": 0,
+        "corner_evaluations": 384,
+        "bernstein_coefficients": 864
+      },
+      "runtime_seconds": 1.296437
+    },
+    {
+      "path": "local/14.json",
+      "sha256": "cc6d4cce39ae88503fe85cc352307a78cee30cea5684e9151ecb597f9babcfd2",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 45,
+        "witness_leaves": 45,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1440,
+        "bernstein_coefficients": 3240
+      },
+      "runtime_seconds": 4.999645
+    },
+    {
+      "path": "local/15.json",
+      "sha256": "609b9fb03a3b513de37c267601f57b65dfeaaf9b46c7f12d5247b265166ff357",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 15,
+        "witness_leaves": 15,
+        "delegated_leaves": 0,
+        "corner_evaluations": 480,
+        "bernstein_coefficients": 1080
+      },
+      "runtime_seconds": 1.622532
+    },
+    {
+      "path": "local/16.json",
+      "sha256": "7cb46fe5a6ac8c74f7a5da4e1725dc010ef46c390f8b253d9f8702900763aba7",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 39,
+        "witness_leaves": 39,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1248,
+        "bernstein_coefficients": 2736
+      },
+      "runtime_seconds": 4.232317
+    },
+    {
+      "path": "local/17.json",
+      "sha256": "12a10b70fccb883e27b70d9722ac4bde310abc66f81d9962338e53db76d8e59e",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 22,
+        "witness_leaves": 22,
+        "delegated_leaves": 0,
+        "corner_evaluations": 704,
+        "bernstein_coefficients": 1584
+      },
+      "runtime_seconds": 2.414354
+    },
+    {
+      "path": "local/18.json",
+      "sha256": "4342254b7c7259b28fd28a93be26e91ac45db4db463dc993cd70775f20e035f9",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 19,
+        "witness_leaves": 19,
+        "delegated_leaves": 0,
+        "corner_evaluations": 608,
+        "bernstein_coefficients": 1368
+      },
+      "runtime_seconds": 2.045846
+    },
+    {
+      "path": "local/19.json",
+      "sha256": "c6744a6e152b3332914dda545e11a6157f6478b960332036ae1c2167cacc2f43",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 67,
+        "witness_leaves": 67,
+        "delegated_leaves": 0,
+        "corner_evaluations": 2144,
+        "bernstein_coefficients": 4860
+      },
+      "runtime_seconds": 7.657433
+    },
+    {
+      "path": "local/2.json",
+      "sha256": "2545744879795aec70158e30bc420afe79ca3935c0b95d9aa99a6e52bd08b030",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 26,
+        "witness_leaves": 26,
+        "delegated_leaves": 0,
+        "corner_evaluations": 832,
+        "bernstein_coefficients": 1872
+      },
+      "runtime_seconds": 2.790685
+    },
+    {
+      "path": "local/20.json",
+      "sha256": "fb0e6cbf10e2f0f6145768e6e3fa5fbd900acc7588445a45143d5d610df23605",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 17,
+        "witness_leaves": 17,
+        "delegated_leaves": 0,
+        "corner_evaluations": 544,
+        "bernstein_coefficients": 1224
+      },
+      "runtime_seconds": 1.84941
+    },
+    {
+      "path": "local/21.json",
+      "sha256": "e3a3710906a99a46f58ae5108dfadc51529eb0362cd46cff24f45d30fa87a413",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 25,
+        "witness_leaves": 25,
+        "delegated_leaves": 0,
+        "corner_evaluations": 800,
+        "bernstein_coefficients": 1800
+      },
+      "runtime_seconds": 2.705394
+    },
+    {
+      "path": "local/22.json",
+      "sha256": "7cb0c6f4e3db7198ee0faf6ea94f999282ac96be61672a1f361b2dcf19182f04",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 31,
+        "witness_leaves": 31,
+        "delegated_leaves": 0,
+        "corner_evaluations": 992,
+        "bernstein_coefficients": 2232
+      },
+      "runtime_seconds": 3.357919
+    },
+    {
+      "path": "local/23.json",
+      "sha256": "ca0123959eb89a9dc47b74dbf63735b269b895ca12c15be4fc465a5e9f9a2df5",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 35,
+        "witness_leaves": 35,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1120,
+        "bernstein_coefficients": 2520
+      },
+      "runtime_seconds": 3.804872
+    },
+    {
+      "path": "local/24.json",
+      "sha256": "43fd7e59844363b7c333402f145f701238544defc78005b97ae75224ec629d1d",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 17,
+        "witness_leaves": 17,
+        "delegated_leaves": 0,
+        "corner_evaluations": 544,
+        "bernstein_coefficients": 1224
+      },
+      "runtime_seconds": 1.839699
+    },
+    {
+      "path": "local/25.json",
+      "sha256": "45e12d882a0e9e6cae90812d55ca2d5eebf59da96d6a2981893152058db35ddd",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 29,
+        "witness_leaves": 29,
+        "delegated_leaves": 0,
+        "corner_evaluations": 928,
+        "bernstein_coefficients": 2088
+      },
+      "runtime_seconds": 3.188246
+    },
+    {
+      "path": "local/26.json",
+      "sha256": "4c34179251e2cb21c30dde5fd51da63f8087abe6161b99cf1d5073723488eac4",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 19,
+        "witness_leaves": 19,
+        "delegated_leaves": 0,
+        "corner_evaluations": 608,
+        "bernstein_coefficients": 1296
+      },
+      "runtime_seconds": 2.030737
+    },
+    {
+      "path": "local/27.json",
+      "sha256": "223862b03fff1b9fd1d46b5cf46ac9027691ece49fa32a464bd1248fc915a936",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 17,
+        "witness_leaves": 17,
+        "delegated_leaves": 0,
+        "corner_evaluations": 544,
+        "bernstein_coefficients": 1224
+      },
+      "runtime_seconds": 1.834504
+    },
+    {
+      "path": "local/28.json",
+      "sha256": "68ca47614f02868c14eca261723071bfa10e351df79a1fc5076b7d2096727100",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 11,
+        "witness_leaves": 11,
+        "delegated_leaves": 0,
+        "corner_evaluations": 352,
+        "bernstein_coefficients": 720
+      },
+      "runtime_seconds": 1.149253
+    },
+    {
+      "path": "local/29.json",
+      "sha256": "1e3209209fedfadcc211aba16f8b9bfe53e46962f36c82d405693d838131d57e",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 85,
+        "witness_leaves": 85,
+        "delegated_leaves": 0,
+        "corner_evaluations": 2720,
+        "bernstein_coefficients": 5652
+      },
+      "runtime_seconds": 9.390274
+    },
+    {
+      "path": "local/3.json",
+      "sha256": "dea611bfdf0a9bef837916aaefc88b602de3e38737f4e386eae09d4b584363a0",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 27,
+        "witness_leaves": 27,
+        "delegated_leaves": 0,
+        "corner_evaluations": 864,
+        "bernstein_coefficients": 1944
+      },
+      "runtime_seconds": 3.03139
+    },
+    {
+      "path": "local/4.json",
+      "sha256": "9cbb6122e4d7af78c1dcc928c6626c9eb381dab6495782070ee0ab13eca85de3",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 16,
+        "witness_leaves": 16,
+        "delegated_leaves": 0,
+        "corner_evaluations": 512,
+        "bernstein_coefficients": 1152
+      },
+      "runtime_seconds": 1.757372
+    },
+    {
+      "path": "local/5.json",
+      "sha256": "ed38accfeb05a807eabe4d58fe136f6adee11ccfb948de895043e3169ee44888",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 20,
+        "witness_leaves": 20,
+        "delegated_leaves": 0,
+        "corner_evaluations": 640,
+        "bernstein_coefficients": 1440
+      },
+      "runtime_seconds": 2.198878
+    },
+    {
+      "path": "local/6.json",
+      "sha256": "49439bb5fd81182dc57ff4f6f2823b558bce931c249c0320b82ce977080f3be4",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 18,
+        "witness_leaves": 18,
+        "delegated_leaves": 0,
+        "corner_evaluations": 576,
+        "bernstein_coefficients": 1296
+      },
+      "runtime_seconds": 1.967237
+    },
+    {
+      "path": "local/7.json",
+      "sha256": "0aeac172c6cd0ebd36602eb84daa1f8f5444b723d438265d6d66ca78201fa050",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 27,
+        "witness_leaves": 27,
+        "delegated_leaves": 0,
+        "corner_evaluations": 864,
+        "bernstein_coefficients": 1944
+      },
+      "runtime_seconds": 2.98873
+    },
+    {
+      "path": "local/8.json",
+      "sha256": "7d54bfcb5c7e9b0fc62361629ac858a8d325c999b3b10567d912ce93a98648d3",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 15,
+        "witness_leaves": 15,
+        "delegated_leaves": 0,
+        "corner_evaluations": 480,
+        "bernstein_coefficients": 1080
+      },
+      "runtime_seconds": 1.665529
+    },
+    {
+      "path": "local/9.json",
+      "sha256": "de912b8e9e5db3ce3762db1ddd71126dc72139ce72dc80de9aa0bc181ae19d5e",
+      "status": "pass",
+      "diagnostic": null,
+      "metrics": {
+        "zooms": 6,
+        "leaves": 34,
+        "witness_leaves": 34,
+        "delegated_leaves": 0,
+        "corner_evaluations": 1088,
+        "bernstein_coefficients": 2448
+      },
+      "runtime_seconds": 3.690619
+    }
+  ],
+  "runtime_seconds": 1437.573459
+}
